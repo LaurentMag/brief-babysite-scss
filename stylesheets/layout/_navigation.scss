@@ -1,0 +1,21 @@
+nav {
+    position: sticky;
+    top: 0px;
+  }
+  ul {
+    display: flex;
+    justify-content: center;
+    background-color: $navigation-background-color;
+  }
+  li {
+    list-style-type: none;
+    font-size: $navigation-text-fontsize;
+    padding: $nav-li-padding;
+    margin: $nav-li-margin;
+  }
+  .nav-link-text {
+    text-decoration: none;
+    text-transform: uppercase;
+    color: $navigation-text-font-color;
+    font-weight: bold;
+  }
