@@ -32,3 +32,19 @@
 //   }
 // }
 
+@mixin grid-basic($col, $row, $grid-gap: 0.1em 0.1em) {
+    display: grid;
+    grid-template-columns: $col;
+    grid-template-rows: $row;
+    gap: $grid-gap;
+}
+
+@mixin img-border-shadow($width, $height, $fit, $border-width, $border-color, $shadow-color) {
+    width: $width;
+    height: $height;
+    object-fit: $fit;
+    display: block;
+    border: $border-width solid $border-color;
+    box-shadow: 2px 5px 5px $shadow-color;
+}
+

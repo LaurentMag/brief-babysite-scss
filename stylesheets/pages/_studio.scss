@@ -1,0 +1,16 @@
+.studio-img {
+  @include img-border-shadow(
+    100%,
+    100%,
+    cover,
+    $img-border-width,
+    $img-border-color,
+    $img-box-shadowcolor
+  );
+}
+.studio-article h3 {
+  font-size: $paragraph-h3-size;
+}
+.studio-article p {
+  font-size: $paragraph-text-size;
+}

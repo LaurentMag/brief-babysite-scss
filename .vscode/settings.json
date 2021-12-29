@@ -1,0 +1,19 @@
+{
+  "files.exclude": {
+    ".gitattributes": true,
+    ".gitignore": true,
+    "js": true,
+    "doc": true,
+    "browserconfig.xml": true,
+    "humans.txt": true,
+    "LICENSE.txt": true,
+    "package-lock.json": true,
+    "package.json": true,
+    "README.md": true,
+    "site.webmanifest": true,
+    "robots.txt": true,
+    ".htaccess": true,
+    ".editorconfig": true,
+    "404.html": true
+  }
+}

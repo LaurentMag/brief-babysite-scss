@@ -1,3 +1,84 @@
 // -----------------------------------------------------------------------------
 // This file contains styles that are specific to the home page.
 // -----------------------------------------------------------------------------
+
+/*-- INDEX MAIN ==================================================== */
+
+.index-container {
+  display: flex;
+  justify-content: center;
+  flex-direction: column;
+}
+.index-main-background {
+  z-index: -1;
+  background: no-repeat url(../img/Depositphotos_195188732_l-2015.jpeg);
+  background-size: cover;
+  background-position: 0% 20%; /*right or left && top/bottom*/
+  height: 100vh;
+  width: 100vw;
+  max-width: 100%;
+  position: sticky;
+  top: $main-backgroundimage-stickytopValue;
+}
+
+.index-main-studio-title {
+  font-size: 4rem;
+  position: relative;
+  top: 35%;
+  left: 64%;
+  text-align: left;
+  width: 30%;
+  height: auto;
+}
+
+.index-main-article-bienvenu {
+  background-color: $header-background-color;
+  text-align: center;
+}
+.index-main-article-bienvenu h3 {
+  font-size: $paragraph-h3-size;
+  text-align: center;
+}
+.index-main-article-bienvenu p {
+  font-size: $paragraph-text-size;
+}
+
+/*-- INDEX PRESTATION ==================================================== */
+.index-prestations-backgroundcolor {
+  background: white;
+}
+.index-img-prestations {
+  @include img-border-shadow(
+    100%,
+    100%,
+    cover,
+    $img-border-width,
+    $img-border-color,
+    $img-box-shadowcolor
+  );
+}
+
+/* ========================================== */
+.index-prestations-article-studio h3,
+.index-prestations-article-domicile h3,
+.index-prestations-article-exterieur h3 {
+  font-size: $paragraph-h3-size;
+}
+
+.index-prestations-article-studio p,
+.index-prestations-article-domicile p,
+.index-prestations-article-exterieur p {
+  font-size: $paragraph-text-size;
+  text-align: left;
+}
+
+/*-- INDEX ACTUALITE INSTA ==================================================== */
+.index-actu-insta-backgroundcolor {
+  background-color: $header-background-color;
+}
+
+.index-actu-insta-container > h3 {
+  font-size: $paragraph-h3-size;
+  text-align: center;
+  grid-area: actuh3;
+}

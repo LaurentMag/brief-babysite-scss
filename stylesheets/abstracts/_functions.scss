@@ -28,3 +28,25 @@
 // @function font($path, $base: $base-url) {
 //   @return asset($base, 'fonts/', $path);
 // }
+
+/*-- INDEX ACTUALITE INSTA ==================================================== */
+@for $i from 1 through 8 {
+    .index-actu-figure#{$i} {
+        grid-area: actufig#{$i};
+        justify-self: center;
+    }
+}
+/*-- STUDIO ==================================================== */
+@for $i from 1 through 3 {
+    .studio-figure#{$i} {
+        grid-area: fig#{$i};
+    }
+}
+/*-- GALERIE ==================================================== */
+@for $i from 1 through 9 {
+    .galerie-figure#{$i} {
+        grid-area: img#{$i};
+    }
+}
+/*-- PRESTATION ==================================================== */
+

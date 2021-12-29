@@ -1,3 +1,26 @@
 // -----------------------------------------------------------------------------
 // This file contains all styles related to the footer of the site/application.
 // -----------------------------------------------------------------------------
+footer {
+    display: flex;
+    justify-content: center;
+    justify-content: space-between;
+    background-color: $footer-background-color;
+    align-items: center;
+  }
+  .footerfigure {
+    margin-right: $footer-copyright-margin;
+  }
+  .footercopytxt {
+    margin-left: $footer-copyright-margin;
+    color: $footer-copyright-fontcolor;
+    font-weight: bold;
+    font-size: $footer-copyright-fontsize;
+  }
+
+  .socialmedia {
+    margin-left: 1em;
+    margin-right: 1em;
+    width: $footer-socialmedia-icon-width;
+    height: auto;
+  }

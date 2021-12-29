@@ -1,0 +1,31 @@
+.galerie-container {
+  display: flex;
+  justify-content: center;
+}
+
+.galerie-image {
+  @include img-border-shadow(
+    100%,
+    100%,
+    cover,
+    $img-border-width,
+    $img-border-color,
+    $img-box-shadowcolor
+  );
+}
+
+.galerie-figure2 > img {
+  object-position: 50% 65%;
+}
+
+.galerie-figure6 > img {
+  object-position: 50% 56%;
+}
+
+.galerie-figure8 > img {
+  object-position: 50% 65%;
+}
+
+.galerie-figure9 > img {
+  object-position: 50% 68%;
+}
