@@ -34,7 +34,7 @@
 
 /*-- INDEX ACTUALITE INSTA ==================================================== */
 .index-actu-insta-container {
-  @include grid-basic(repeat(4, 1fr), 0.2fr repeat(2, 1fr), 0.1em 0.1em);
+  @include grid-basic(repeat(4, 1fr), 0.2fr repeat(2, 1fr), 1.5rem);
   grid-template-areas:
     "actuh3 actuh3 actuh3 actuh3"
     "actufig1 actufig2 actufig3 actufig4"
