@@ -3,16 +3,6 @@
   justify-content: center;
 }
 
-.galerie-image {
-  @include img-border-shadow(
-    100%,
-    100%,
-    cover,
-    $img-border-width,
-    $img-border-color,
-    $img-box-shadowcolor
-  );
-}
 
 .galerie-figure2 > img {
   object-position: 50% 65%;

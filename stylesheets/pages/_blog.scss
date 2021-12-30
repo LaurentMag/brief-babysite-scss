@@ -1,37 +1,22 @@
-.blog-container {
+
+.blog-article-common-setting {
+  background-color: rgb(248, 247, 246);
   display: flex;
+  flex-direction: column;
   justify-content: center;
-}
-
-.blog-img {
-  @include img-border-shadow(
-    100%,
-    100%,
-    cover,
-    $img-border-width,
-    $img-border-color,
-    $img-box-shadowcolor
-  );
-}
-.blog-article1 {
-    align-self: center;
-    margin-right: 10em;
-    margin-left: 6em;
-}
-.blog-article2 {
-    align-self: center;
-    margin-left: 10em;
-  }
-  .blog-article3 {
-    align-self: center;
-    margin-right: 10em;
-    margin-left: 6em;
-  }
-
-  .blog-article1 h3, .blog-article2 h3, .blog-article3 h3 {
+  align-items: center;
+  // overflow-y: scroll;
+  h3 {
     font-size: $paragraph-h3-size;
+    width: 70%
   }
-  .blog-article1 p, .blog-article2 p, .blog-article3 p  {
+  p {
     font-size: $paragraph-text-size;
-    width: 80%;
+    width: 70%;
   }
+}
+
+.blog-figure-article2 > img {
+  object-position: 50% 75%;
+
+}

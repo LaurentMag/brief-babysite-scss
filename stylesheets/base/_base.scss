@@ -33,3 +33,14 @@
 //     text-decoration: underline;
 //   }
 // }
+
+.img-general-setting {
+    @include img-border-shadow(
+        100%,
+        100%,
+        cover,
+        $img-border-width,
+        $img-border-color,
+        $img-box-shadowcolor
+      );
+}

@@ -55,11 +55,8 @@
     "fig2 fig3";
   margin: $grid-margin-top-down $grid-studio-margin;
 }
-.studio-article1 {
+.studio-article {
   grid-area: article;
-  justify-self: left;
-  font-size: $paragraph-text-size;
-  margin-left: $grid-index-margin;
 }
 
 /* ================================================================== */
@@ -88,12 +85,11 @@
   grid-template-areas:
     "studioarticle studiofig1"
     "studioarticle studiofig2";
-  margin: $grid-margin-top-down 0 $grid-margin-prestations-big-down 0;
+  margin: $grid-margin-top-down auto $grid-margin-prestations-big-down auto;
   width: 80%;
 }
 .prestations-studio-article {
   grid-area: studioarticle;
-  justify-self: center;
 }
 .prestations-studio-figure1 {
   grid-area: studiofig1;
@@ -107,12 +103,11 @@
   grid-template-areas:
     "domicilearticle domicilefig1"
     "domicilearticle domicilefig2";
-  margin: $grid-margin-top-down 0 $grid-margin-prestations-big-down 0;
+    margin: $grid-margin-top-down auto $grid-margin-prestations-big-down auto;
   width: 80%;
 }
 .prestations-domicile-article {
   grid-area: domicilearticle;
-  justify-self: center;
 }
 .prestations-domicile-figure1 {
   grid-area: domicilefig1;
@@ -126,12 +121,11 @@
   grid-template-areas:
     "extarticle extfig1"
     "extarticle extfig2";
-  margin: $grid-margin-top-down 0 $grid-margin-prestations-big-down 0;
+    margin: $grid-margin-top-down auto $grid-margin-prestations-big-down auto;
   width: 80%;
 }
 .prestations-exterieur-article {
   grid-area: extarticle;
-  justify-self: center;
 }
 .prestations-exterieur-figure1 {
   grid-area: extfig1;
@@ -149,7 +143,7 @@
     "article1 art1fig"
     "art2fig article2"
     "article3 art3fig";
-  margin: $grid-margin-top-down 0 $grid-margin-prestations-big-down 0;
+  margin: $grid-margin-top-down auto $grid-margin-prestations-big-down auto;
   width: 80%;
 }
 .blog-article1 {
@@ -177,16 +171,15 @@
 /*-- ABOUTME ==================================================== */
 
 .aboutme-grid-container {
-  @include grid-basic(2fr 1fr, repeat(2, 45vh), $grid-gap);
+  @include grid-basic(2fr 1fr, repeat(2, 50vh), $grid-gap);
   grid-template-areas:
     "photo text"
     "photo text";
-    margin: $grid-margin-top-down 10%;
+  margin: $grid-margin-top-down 10%;
 }
 .aboutme-photo-figure {
   grid-area: photo;
 }
 .aboutme-article-container {
   grid-area: text;
-  align-self: center;
 }

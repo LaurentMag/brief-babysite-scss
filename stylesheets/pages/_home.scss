@@ -47,16 +47,6 @@
 .index-prestations-backgroundcolor {
   background: white;
 }
-.index-img-prestations {
-  @include img-border-shadow(
-    100%,
-    100%,
-    cover,
-    $img-border-width,
-    $img-border-color,
-    $img-box-shadowcolor
-  );
-}
 
 /* ========================================== */
 .index-prestations-article-studio h3,

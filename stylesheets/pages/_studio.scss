@@ -1,16 +1,27 @@
-.studio-img {
-  @include img-border-shadow(
-    100%,
-    100%,
-    cover,
-    $img-border-width,
-    $img-border-color,
-    $img-box-shadowcolor
-  );
-}
+
 .studio-article h3 {
   font-size: $paragraph-h3-size;
 }
 .studio-article p {
   font-size: $paragraph-text-size;
+}
+
+.studio-article {
+  justify-self: left;
+  // align-self: start; /* permet de forcer la taille au contenu sinon prend "toute" la place dans le grid */
+  margin-left: $grid-studio-margin;
+  width: 50em;
+}
+
+.studio-article-border {
+  z-index: -1;
+  width: 100%;
+  height: 100%;
+  border-left: 2px solid gray;
+  // border-bottom: 1px solid gray;
+  // border-top: 1px solid gray;
+  padding-left: 2em;
+  padding-bottom: 2em;
+  position: relative;
+  top: 2rem;
 }
