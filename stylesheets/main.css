@@ -5,6 +5,7 @@
 /* ------------------------------------------------ */
 /* ------------------------------------------------ */
 /* ------------------------------------------------ */
+/* ------------------------------------------------ */
 /* NOT USED FOR TESTING PURPOSE------------------------------------------ */
 /*-- INDEX ACTUALITE INSTA ==================================================== */
 .index-actu-figure1 {
@@ -541,6 +542,7 @@ ul {
   border: 0.1em solid rgba(149, 149, 149, 0.555);
   -webkit-box-shadow: 2px 5px 5px rgba(172, 172, 172, 0.548);
           box-shadow: 2px 5px 5px rgba(172, 172, 172, 0.548);
+  border-radius: 0.2rem;
 }
 
 /**
@@ -602,8 +604,8 @@ nav {
   position: -webkit-sticky;
   position: sticky;
   top: 0px;
-  -webkit-box-shadow: 0px 5px 6px rgba(116, 116, 116, 0.39), 0px -5px 6px rgba(116, 116, 116, 0.39);
-          box-shadow: 0px 5px 6px rgba(116, 116, 116, 0.39), 0px -5px 6px rgba(116, 116, 116, 0.39);
+  -webkit-box-shadow: 0px 3px 4px rgba(116, 116, 116, 0.39), 0px -3px 4px rgba(143, 143, 143, 0.39);
+          box-shadow: 0px 3px 4px rgba(116, 116, 116, 0.39), 0px -3px 4px rgba(143, 143, 143, 0.39);
 }
 
 ul {
@@ -708,7 +710,7 @@ li {
       grid-template-rows: 0.2fr repeat(2, 70vh);
   gap: 2em;
       grid-template-areas: "article article" "fig1 fig1" "fig2 fig3";
-  margin: 4em 5%;
+  margin: 4em 8%;
 }
 
 .studio-article {
@@ -891,9 +893,9 @@ li {
   display: grid;
   -ms-grid-columns: 2fr 1fr;
       grid-template-columns: 2fr 1fr;
-  -ms-grid-rows: (50vh)[2];
-      grid-template-rows: repeat(2, 50vh);
-  gap: 2em;
+  -ms-grid-rows: (45vh)[2];
+      grid-template-rows: repeat(2, 45vh);
+  gap: 0em;
       grid-template-areas: "photo text" "photo text";
   margin: 4em 10%;
 }
@@ -905,7 +907,7 @@ li {
   grid-area: photo;
 }
 
-.aboutme-article-container {
+.aboutme-article {
   -ms-grid-row: 1;
   -ms-grid-row-span: 2;
   -ms-grid-column: 2;
@@ -923,6 +925,8 @@ footer {
       -ms-flex-pack: justify;
           justify-content: space-between;
   background-color: #d6c7d4;
+  -webkit-box-shadow: 0px -3px 4px rgba(119, 111, 118, 0.493);
+          box-shadow: 0px -3px 4px rgba(119, 111, 118, 0.493);
   -webkit-box-align: center;
       -ms-flex-align: center;
           align-items: center;
@@ -1042,7 +1046,7 @@ footer {
 .studio-article {
   -ms-grid-column-align: left;
       justify-self: left;
-  margin-left: 5%;
+  margin-left: 8%;
   width: 50em;
 }
 
@@ -1130,6 +1134,7 @@ footer {
   -webkit-box-align: center;
       -ms-flex-align: center;
           align-items: center;
+  border-radius: 0.2rem;
 }
 
 .blog-article-common-setting h3 {
@@ -1148,13 +1153,10 @@ footer {
 }
 
 .aboutme-photo-figure {
-  width: 80%;
-  height: 90%;
-  -ms-flex-item-align: center;
-      -ms-grid-row-align: center;
-      align-self: center;
-  -ms-grid-column-align: center;
-      justify-self: center;
+  width: 90%;
+  height: 100%;
+  -ms-grid-column-align: start;
+      justify-self: start;
 }
 
 .aboutme-photo {
@@ -1166,23 +1168,35 @@ footer {
   border: 0.1em solid rgba(149, 149, 149, 0.555);
   -webkit-box-shadow: 2px 5px 5px rgba(172, 172, 172, 0.548);
           box-shadow: 2px 5px 5px rgba(172, 172, 172, 0.548);
+  border-radius: 0.2rem;
   -o-object-position: 50% 50%;
      object-position: 50% 50%;
   margin: auto;
-}
-
-.aboutme-article-container {
-  -ms-flex-item-align: center;
-      -ms-grid-row-align: center;
-      align-self: center;
+  border-radius: 0.2rem;
 }
 
 /*  c'est le container/ celui qui est placé sur la grid qui est centré */
 .aboutme-article {
-  width: 80%;
-  height: 100%;
-  padding-right: 5em;
-  border-right: 2px solid gray;
+  width: 120%;
+  background-color: #f8f7f6;
+  border-radius: 0.2rem;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  position: relative;
+  left: -6.5rem;
+  z-index: -1;
+  /* sinon pass au dessus navbar à cause de la position relative */
 }
 
 .aboutme-article h3 {
@@ -1191,5 +1205,6 @@ footer {
 
 .aboutme-article p {
   font-size: 1.5em;
+  width: 80%;
 }
 /*# sourceMappingURL=main.css.map */

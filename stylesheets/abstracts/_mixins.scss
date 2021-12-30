@@ -37,6 +37,7 @@
     grid-template-columns: $col;
     grid-template-rows: $row;
     gap: $grid-gap;
+    @content;
 }
 
 @mixin img-border-shadow($width, $height, $fit, $border-width, $border-color, $shadow-color) {
@@ -46,5 +47,6 @@
     display: block;
     border: $border-width solid $border-color;
     box-shadow: 2px 5px 5px $shadow-color;
+    border-radius: 0.2rem;
 }
 
