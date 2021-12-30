@@ -6,8 +6,13 @@
 /* ------------------------------------------------ */
 /* ------------------------------------------------ */
 /* ------------------------------------------------ */
+/* ------------------------------------------------ */
 /* NOT USED FOR TESTING PURPOSE------------------------------------------ */
 /*-- INDEX ACTUALITE INSTA ==================================================== */
+@import url("https://fonts.googleapis.com/css2?family=Cinzel+Decorative&display=swap");
+@import url("https://fonts.googleapis.com/css2?family=Cinzel:wght@500&display=swap");
+@import url("https://fonts.googleapis.com/css2?family=Playfair+Display&display=swap");
+@import url("https://fonts.googleapis.com/css2?family=Poppins&display=swap");
 .index-actu-figure1 {
   -ms-grid-row: 2;
   -ms-grid-column: 1;
@@ -545,6 +550,20 @@ ul {
   border-radius: 0.2rem;
 }
 
+.h3-default {
+  font-family: "Playfair Display", serif;
+  font-size: 2.3em;
+}
+
+.paragraph-default {
+  font-family: "Poppins", sans-serif;
+  font-size: 1.3em;
+}
+
+/* used for home title & logo? */
+/* used for navbar */
+/* used for h3 */
+/* used for p */
 /**
  * Basic typography style for copy text
  */
@@ -629,6 +648,8 @@ li {
   text-decoration: none;
   text-transform: uppercase;
   color: #44423f;
+  font-family: "Cinzel", serif;
+  font-size: 1.1em;
   font-weight: bold;
 }
 
@@ -940,7 +961,6 @@ footer {
   margin-left: 7em;
   color: #6e6e6e;
   font-weight: bold;
-  font-size: 1rem;
 }
 
 .socialmedia {
@@ -979,9 +999,12 @@ footer {
 }
 
 .index-main-studio-title {
-  font-size: 4rem;
+  font-family: "Cinzel Decorative", cursive;
+  font-size: 5em;
+  font-weight: bold;
+  color: #3a3838;
   position: relative;
-  top: 35%;
+  top: 33%;
   left: 64%;
   text-align: left;
   width: 30%;
@@ -994,12 +1017,7 @@ footer {
 }
 
 .index-main-article-bienvenu h3 {
-  font-size: 2.3em;
   text-align: center;
-}
-
-.index-main-article-bienvenu p {
-  font-size: 1.5em;
 }
 
 /*-- INDEX PRESTATION ==================================================== */
@@ -1008,16 +1026,9 @@ footer {
 }
 
 /* ========================================== */
-.index-prestations-article-studio h3,
-.index-prestations-article-domicile h3,
-.index-prestations-article-exterieur h3 {
-  font-size: 2.3em;
-}
-
 .index-prestations-article-studio p,
 .index-prestations-article-domicile p,
 .index-prestations-article-exterieur p {
-  font-size: 1.5em;
   text-align: left;
 }
 
@@ -1027,20 +1038,11 @@ footer {
 }
 
 .index-actu-insta-container > h3 {
-  font-size: 2.3em;
   text-align: center;
   -ms-grid-row: 1;
   -ms-grid-column: 1;
   -ms-grid-column-span: 4;
   grid-area: actuh3;
-}
-
-.studio-article h3 {
-  font-size: 2.3em;
-}
-
-.studio-article p {
-  font-size: 1.5em;
 }
 
 .studio-article {
@@ -1090,18 +1092,6 @@ footer {
      object-position: 50% 68%;
 }
 
-.prestations-studio-article h3,
-.prestations-domicile-article h3,
-.prestations-exterieur-article h3 {
-  font-size: 2.3em;
-}
-
-.prestations-studio-article p,
-.prestations-domicile-article p,
-.prestations-exterieur-article p {
-  font-size: 1.5em;
-}
-
 .prestations-studio-article,
 .prestations-domicile-article,
 .prestations-exterieur-article {
@@ -1138,12 +1128,10 @@ footer {
 }
 
 .blog-article-common-setting h3 {
-  font-size: 2.3em;
   width: 70%;
 }
 
 .blog-article-common-setting p {
-  font-size: 1.5em;
   width: 70%;
 }
 
@@ -1155,8 +1143,8 @@ footer {
 .aboutme-photo-figure {
   width: 90%;
   height: 100%;
-  -ms-grid-column-align: start;
-      justify-self: start;
+  -ms-grid-column-align: end;
+      justify-self: end;
 }
 
 .aboutme-photo {
@@ -1177,7 +1165,6 @@ footer {
 
 /*  c'est le container/ celui qui est placé sur la grid qui est centré */
 .aboutme-article {
-  width: 120%;
   background-color: #f8f7f6;
   border-radius: 0.2rem;
   display: -webkit-box;
@@ -1193,18 +1180,15 @@ footer {
   -webkit-box-align: center;
       -ms-flex-align: center;
           align-items: center;
-  position: relative;
-  left: -6.5rem;
   z-index: -1;
   /* sinon pass au dessus navbar à cause de la position relative */
 }
 
 .aboutme-article h3 {
-  font-size: 2.3em;
+  width: 80%;
 }
 
 .aboutme-article p {
-  font-size: 1.5em;
   width: 80%;
 }
 /*# sourceMappingURL=main.css.map */

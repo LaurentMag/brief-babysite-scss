@@ -1,7 +1,7 @@
 .aboutme-photo-figure {
   width: 90%;
   height: 100%;
-  justify-self: start;
+  justify-self: end;
 }
 
 .aboutme-photo {
@@ -24,7 +24,7 @@
 /*  c'est le container/ celui qui est placé sur la grid qui est centré */
 
 .aboutme-article {
-  width: 120%;
+
   // height: 100%;
   // padding-right: 5em;
   // border-right: 2px solid gray;
@@ -36,14 +36,11 @@
   flex-direction: column;
   justify-content: center;
   align-items: center;
-  position: relative;
-  left: -6.5rem;
   z-index: -1; /* sinon pass au dessus navbar à cause de la position relative */
   h3 {
-    font-size: $paragraph-h3-size;
+    width: 80%;
   }
   p {
-    font-size: $paragraph-text-size;
     width: 80%;
   }
 }

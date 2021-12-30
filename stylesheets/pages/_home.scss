@@ -22,9 +22,12 @@
 }
 
 .index-main-studio-title {
-  font-size: 4rem;
+  font-family: $font-home-title-font;
+  font-size: 5em;
+  font-weight: bold;
+  color: rgb(58, 56, 56);
   position: relative;
-  top: 35%;
+  top: 33%;
   left: 64%;
   text-align: left;
   width: 30%;
@@ -36,11 +39,7 @@
   text-align: center;
 }
 .index-main-article-bienvenu h3 {
-  font-size: $paragraph-h3-size;
   text-align: center;
-}
-.index-main-article-bienvenu p {
-  font-size: $paragraph-text-size;
 }
 
 /*-- INDEX PRESTATION ==================================================== */
@@ -49,16 +48,10 @@
 }
 
 /* ========================================== */
-.index-prestations-article-studio h3,
-.index-prestations-article-domicile h3,
-.index-prestations-article-exterieur h3 {
-  font-size: $paragraph-h3-size;
-}
 
 .index-prestations-article-studio p,
 .index-prestations-article-domicile p,
 .index-prestations-article-exterieur p {
-  font-size: $paragraph-text-size;
   text-align: left;
 }
 
@@ -68,7 +61,6 @@
 }
 
 .index-actu-insta-container > h3 {
-  font-size: $paragraph-h3-size;
   text-align: center;
   grid-area: actuh3;
 }
