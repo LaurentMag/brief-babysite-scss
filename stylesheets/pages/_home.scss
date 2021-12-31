@@ -37,6 +37,7 @@
 .index-main-article-bienvenu {
   background-color: $header-background-color;
   text-align: center;
+  padding: 2rem 0;
 }
 .index-main-article-bienvenu h3 {
   text-align: center;
@@ -45,6 +46,18 @@
 /*-- INDEX PRESTATION ==================================================== */
 .index-prestations-backgroundcolor {
   background: white;
+}
+.index-prestations-container > h3 {
+  text-align: center;
+}
+.index-prestations-article-studio {
+  text-align: center;
+}
+.index-prestations-article-domicile {
+  text-align: center;
+}
+.index-prestations-article-exterieur {
+  text-align: center;
 }
 
 /* ========================================== */
@@ -62,5 +75,11 @@
 
 .index-actu-insta-container > h3 {
   text-align: center;
-  grid-area: actuh3;
+}
+
+.index-actu-img3 {
+  object-position: 70% 50%;
+}
+.index-actu-img5 {
+  object-position: 20% 75%;
 }

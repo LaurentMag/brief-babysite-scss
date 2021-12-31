@@ -1,47 +1,42 @@
 /*-- INDEX PRESTATION ==================================================== */
 .index-prestations-container {
-  @include grid-basic(repeat(3, 1fr), 0.1fr 0.1fr, 0.2rem 5em) {
+  @include grid-basic(repeat(3, 1fr), 0.1fr 0.1fr, 0.2rem 5rem) {
     grid-template-areas:
       "prestah3 prestah3 prestah3"
       "presta1 presta2 presta3";
-    margin: 0 $grid-index-margin;
+    margin: 0 $grid-margin-index-presta;
     /* 0 parce que des top /down, et gauche et droite */
     /* margin: 10px 90px 10px 50px; : haut droite bas gauche */
+    padding: 4em 0;
   }
 }
-.index-img-prestations {
-  width: 100%;
-  height: 100%;
-  object-fit: cover;
-}
 .index-prestations-container > h3 {
-  font-size: $paragraph-h3-size;
-  margin-left: 10em;
   grid-area: prestah3;
-  text-align: left;
 }
 .index-prestations-article-studio {
-  text-align: center;
   grid-area: presta1;
 }
 .index-prestations-article-domicile {
-  text-align: center;
   grid-area: presta2;
 }
 .index-prestations-article-exterieur {
-  text-align: center;
   grid-area: presta3;
 }
 
 /*-- INDEX ACTUALITE INSTA ==================================================== */
 .index-actu-insta-container {
-  @include grid-basic(repeat(4, 1fr), 0.2fr repeat(2, 1fr), 1.5rem) {
+  @include grid-basic(repeat(4, 1fr), 0.2fr repeat(2, 40vh), 1rem) {
     grid-template-areas:
       "actuh3 actuh3 actuh3 actuh3"
       "actufig1 actufig2 actufig3 actufig4"
       "actufig5 actufig6 actufig7 actufig8";
-    margin: 0 $grid-index-margin;
+    margin: 0rem $grid-margin-index;
+    padding: 3rem 0 5rem 0;
   }
+}
+
+.index-actu-insta-container > h3 {
+  grid-area: actuh3;
 }
 
 /* check functions to get all actufig... wrote via function */
@@ -50,16 +45,12 @@
 /*-- STUDIO ==================================================== */
 
 .studio-container {
-  @include grid-basic(repeat(2, 1fr), 0.2fr repeat(2, 70vh), $grid-gap) {
+  @include grid-basic(repeat(2, 1fr), repeat(2, 60vh), $grid-gap) {
     grid-template-areas:
-      "article article"
       "fig1 fig1"
       "fig2 fig3";
-    margin: $grid-margin-top-down $grid-studio-margin;
+    margin: 0 $grid-margin-studio $grid-margin-top-down $grid-margin-studio;
   }
-}
-.studio-article {
-  grid-area: article;
 }
 
 /* ================================================================== */
@@ -85,7 +76,7 @@
 /*-- PRESTATION ==================================================== */
 
 .prestations-grid1 {
-  @include grid-basic(repeat(2, 1fr), repeat(2, 30vh), $grid-gap) {
+  @include grid-basic(repeat(2, 1fr), repeat(2, 30vh), $grid-margin-prestation) {
     grid-template-areas:
       "studioarticle studiofig1"
       "studioarticle studiofig2";
@@ -104,7 +95,7 @@
 }
 
 .prestations-grid2 {
-  @include grid-basic(repeat(2, 1fr), repeat(2, 30vh), $grid-gap) {
+  @include grid-basic(repeat(2, 1fr), repeat(2, 30vh), $grid-margin-prestation) {
     grid-template-areas:
       "domicilearticle domicilefig1"
       "domicilearticle domicilefig2";
@@ -123,7 +114,7 @@
 }
 
 .prestations-grid3 {
-  @include grid-basic(repeat(2, 1fr), repeat(2, 30vh), $grid-gap) {
+  @include grid-basic(repeat(2, 1fr), repeat(2, 30vh), $grid-margin-prestation) {
     grid-template-areas:
       "extarticle extfig1"
       "extarticle extfig2";
@@ -145,7 +136,7 @@
 /*-- BLOG ==================================================== */
 
 .blog-grid {
-  @include grid-basic(repeat(2, 1fr), repeat(3, 50vh), $grid-gap 0.5em) {
+  @include grid-basic(repeat(2, 1fr), repeat(3, 50vh), $grid-gap 0.1em) {
     grid-template-areas:
       "article1 art1fig"
       "art2fig article2"
@@ -183,7 +174,7 @@
     grid-template-areas:
       "photo text"
       "photo text";
-    margin: $grid-margin-top-down 10%;
+    margin: $grid-margin-top-down calc(10% + 2.7%) $grid-margin-top-down calc(10% - 2.7%);
   }
 }
 .aboutme-photo-figure {

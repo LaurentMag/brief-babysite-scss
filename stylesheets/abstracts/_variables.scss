@@ -63,29 +63,30 @@ $font-h3-default: 'Playfair Display', serif;
 $font-p-default: 'Poppins', sans-serif;
 /* ------------------------------------------------ */
 $header-background-color: rgb(245, 240, 234);
-$header-logo-size: 15em;
+$header-logo-size: 10rem;
 /* ------------------------------------------------ */
 $navigation-background-color: rgb(226, 219, 209);
 $navigation-text-font-color: rgb(68, 66, 63);
-$navigation-text-fontsize: 0.9rem;
+$navigation-text-fontsize: 1.5em;
 $nav-li-margin: 1%;
 $nav-li-padding: 0.5%;
 /* ------------------------------------------------ */
 $footer-background-color: rgb(214, 199, 212);
 $footer-copyright-fontcolor: rgb(110, 110, 110);
-$footer-copyright-margin: 7em;
-$footer-copyright-fontsize: 1rem;
-$footer-socialmedia-icon-width: 4em;
+$footer-copyright-margin: 6rem;
+$footer-socialmedia-icon-width: 3rem;
 /* ------------------------------------------------ */
 $paragraph-h3-size: 2.3em;
 $paragraph-text-size: 1.3em;
 /* ------------------------------------------------ */
 $main-backgroundimage-stickytopValue: -275px;
 /* ------------------------------------------------ */
-$grid-index-margin: 20%;
-$grid-studio-margin: 8%;
-$grid-margin-top-down: 4em;
-$grid-margin-prestations-big-down: 10em;
+$grid-margin-index: 10%;
+$grid-margin-index-presta: 12%;
+$grid-margin-studio: 8%;
+$grid-margin-prestation: 0.3rem 0;
+$grid-margin-top-down: 2.5rem;
+$grid-margin-prestations-big-down: 10rem;
 $grid-gap: 2em;
 /* ------------------------------------------------ */
 $img-border-width: 0.1em;
