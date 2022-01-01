@@ -9,7 +9,7 @@
 /* ------------------------------------------------ */
 /* NOT USED FOR TESTING PURPOSE------------------------------------------ */
 /*-- INDEX ACTUALITE INSTA ==================================================== */
-@import url("https://fonts.googleapis.com/css2?family=Cinzel+Decorative&display=swap");
+@import url("https://fonts.googleapis.com/css2?family=Cinzel:wght@500&display=swap");
 @import url("https://fonts.googleapis.com/css2?family=Cinzel:wght@500&display=swap");
 @import url("https://fonts.googleapis.com/css2?family=Playfair+Display&display=swap");
 @import url("https://fonts.googleapis.com/css2?family=Poppins&display=swap");
@@ -704,7 +704,7 @@ li {
       grid-template-rows: 0.2fr repeat(2, 40vh);
   gap: 1rem;
       grid-template-areas: "actuh3 actuh3 actuh3 actuh3" "actufig1 actufig2 actufig3 actufig4" "actufig5 actufig6 actufig7 actufig8";
-  margin: 0rem 10%;
+  margin: 0rem 12%;
   padding: 3rem 0 5rem 0;
 }
 
@@ -980,8 +980,7 @@ footer {
   background-position: 0% 20%;
   /*right or left && top/bottom*/
   height: 100vh;
-  width: 100vw;
-  max-width: 100%;
+  width: 100%;
   position: -webkit-sticky;
   position: sticky;
   top: -275px;
@@ -1057,45 +1056,42 @@ footer {
      object-position: 20% 75%;
 }
 
-.studio-article-flex {
+.studio-article-container {
   background-color: #f8f7f6;
   margin: 2.5rem 8% 0 8%;
-  border-radius: 0.2rem;
-  display: -webkit-box;
-  display: -ms-flexbox;
-  display: flex;
-  -ms-flex-wrap: wrap;
-      flex-wrap: wrap;
+  display: -ms-grid;
+  display: grid;
+  gap: 1rem;
+  grid-auto-columns: minmax(-webkit-min-content, 100ch);
+  grid-auto-columns: minmax(min-content, 100ch);
   -webkit-box-pack: center;
       -ms-flex-pack: center;
           justify-content: center;
 }
 
-.studio-article-flex > h3 {
-  padding: 1rem 5rem 0 5rem;
-  margin-inline: auto;
-  -webkit-box-flex: 1;
-      -ms-flex-positive: 1;
-          flex-grow: 1;
-  -ms-flex-negative: 1;
-      flex-shrink: 1;
-  -ms-flex-preferred-size: 70%;
-      flex-basis: 70%;
+.studio-article-container h3 {
+  -ms-grid-column-align: center;
+      justify-self: center;
+  width: 80%;
+  margin: 1rem 1rem 0 1rem;
 }
 
-.studio-article {
-  padding: 1rem 5rem 1rem 5rem;
-  -webkit-box-flex: 1;
-      -ms-flex-positive: 1;
-          flex-grow: 1;
-  -ms-flex-negative: 1;
-      flex-shrink: 1;
-  -ms-flex-preferred-size: 30%;
-      flex-basis: 30%;
+.studio-article-container .studio-article-0,
+.studio-article-container .studio-article-1 {
+  -ms-grid-column-align: center;
+      justify-self: center;
+  margin: 0rem 1rem 1rem 1rem;
 }
 
-.studio-article p {
-  margin-inline: auto;
+@media (min-width: 850px) {
+  .studio-article-container {
+    margin: 2.5rem 12% 0 12%;
+  }
+  h3 {
+    -ms-grid-column: 1;
+    -ms-grid-column-span: 2;
+    grid-column: 1 / span 2;
+  }
 }
 
 .galerie-container {
@@ -1215,7 +1211,6 @@ footer {
   border-radius: 0.2rem;
 }
 
-/*  c'est le container/ celui qui est placé sur la grid qui est centré */
 .aboutme-article {
   background-color: #f8f7f6;
   border-radius: 0.2rem;
@@ -1243,4 +1238,6 @@ footer {
 .aboutme-article p {
   width: 80%;
 }
+
+/*  c'est le container/ celui qui est placé sur la grid qui est centré */
 /*# sourceMappingURL=main.css.map */

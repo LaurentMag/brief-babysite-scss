@@ -15,11 +15,14 @@
   background-size: cover;
   background-position: 0% 20%; /*right or left && top/bottom*/
   height: 100vh;
-  width: 100vw;
-  max-width: 100%;
+  width: 100%;
   position: sticky;
   top: $main-backgroundimage-stickytopValue;
 }
+  // width: 100vw; 
+  // max-width: 100%;
+  // if use 100vw need to use 100% max otherwise have little horizontal scrollbar
+  // better that way use width:100%;
 
 .index-main-studio-title {
   font-family: $font-home-title-font;
