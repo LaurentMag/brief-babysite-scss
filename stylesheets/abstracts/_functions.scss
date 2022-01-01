@@ -28,7 +28,12 @@
 // @function font($path, $base: $base-url) {
 //   @return asset($base, 'fonts/', $path);
 // }
-
+/*-- INDEX PRESTATION ==================================================== */
+@for $i from 1 through 4 {
+    .index-prestation-#{$i} {
+        grid-area: index-presta#{$i};
+    }
+}
 /*-- INDEX ACTUALITE INSTA ==================================================== */
 @for $i from 1 through 8 {
     .index-actu-figure#{$i} {

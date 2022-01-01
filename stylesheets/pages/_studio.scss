@@ -23,30 +23,4 @@
 //   max-width: 30%;
 // }
 
-.studio-article-container {
-  background-color: $text-background-color;
-  margin: $grid-margin-top-down $grid-margin-studio 0 $grid-margin-studio;
-  display: grid;
-  gap: 1rem;
-  grid-auto-columns: minmax(min-content, 100ch);
-  justify-content: center;
-  h3 {
-    justify-self: center;
-    width: 80%;
-    margin: 1rem 1rem 0 1rem;
-  }
-  .studio-article-0,
-  .studio-article-1 {
-    justify-self: center;
-    margin: 0rem 1rem 1rem 1rem;
-  }
-}
 
-@media (min-width: 850px) {
-  .studio-article-container {
-    margin: $grid-margin-top-down $grid-margin-index 0 $grid-margin-index;
-  }
-  h3 {
-    grid-column: 1 / span 2;
-  }
-}

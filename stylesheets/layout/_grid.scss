@@ -1,26 +1,49 @@
 /*-- INDEX PRESTATION ==================================================== */
 .index-prestations-container {
-  @include grid-basic(repeat(3, 1fr), 0.1fr 0.1fr, 0.2rem 5rem) {
+  @include grid-basic(repeat(3, 1fr), 0.1fr 0.1fr, 0 6vw) {
     grid-template-areas:
-      "prestah3 prestah3 prestah3"
-      "presta1 presta2 presta3";
+      "index-presta1 index-presta1 index-presta1"
+      "index-presta2 index-presta3 index-presta4";
     margin: 0 $grid-margin-index-presta;
     /* 0 parce que des top /down, et gauche et droite */
     /* margin: 10px 90px 10px 50px; : haut droite bas gauche */
-    padding: 4em 0;
+    padding: 0.5rem 0rem 4rem 0rem;
+    }
   }
+  .index-prestation-gen > figure {
+    height: 25vw;
+  }
+  .img-prestation-mediaQ3 {
+    object-position: 50% 5%;
+  }
+
+
+
+@media (max-width: 850px) {
+  .index-prestations-container {
+    @include grid-basic(1fr, 0.1fr 0.1fr, 1rem 0) {
+      grid-template-areas:
+        "index-presta1"
+        "index-presta2" 
+        "index-presta3" 
+        "index-presta4";
+      margin: 0 15vw;
+      padding: 0.5rem 0rem 2rem 0rem;
+    }
+    @for $i from 1 through 4 {
+      .index-prestation-#{$i} {
+          grid-area: index-presta#{$i};
+      }
+  }
+  }
+.index-prestation-gen > figure {
+  height: 55vw;
 }
-.index-prestations-container > h3 {
-  grid-area: prestah3;
+.img-prestation-mediaQ3 {
+  object-position: 50% 5%;
 }
-.index-prestations-article-studio {
-  grid-area: presta1;
-}
-.index-prestations-article-domicile {
-  grid-area: presta2;
-}
-.index-prestations-article-exterieur {
-  grid-area: presta3;
+
+
 }
 
 /*-- INDEX ACTUALITE INSTA ==================================================== */
@@ -43,18 +66,71 @@
 
 /* ================================================================== */
 /*-- STUDIO ==================================================== */
+/* ================================================================== */
+
+.studio-article-container {
+  background-color: $text-background-color;
+  margin: $grid-margin-top-down $grid-margin-studio 0 $grid-margin-studio;
+  display: grid;
+  grid-auto-columns: minmax(min-content, 100ch);
+  justify-content: center;
+  gap: 1rem;
+  h3 {
+    justify-self: center;
+    width: 80%;
+    margin: 1rem 1rem 0 1rem;
+  }
+  .studio-article-0,
+  .studio-article-1 {
+    justify-self: center;
+    margin: 0rem 1rem 1rem 1rem;
+  }
+}
+
+@media screen and (min-width: 850px) {
+  .studio-article-container {
+    margin: $grid-margin-top-down $grid-margin-index 0 $grid-margin-index;
+  }
+  h3 {
+    grid-column: 1 / span 2;
+  }
+}
+
+/*-- PHOTOS GRID ==================================================== */
 
 .studio-container {
-  @include grid-basic(repeat(2, 1fr), repeat(2, 60vh), $grid-gap) {
+  @include grid-basic(1fr, repeat(2, 35vh), $grid-gap) {
     grid-template-areas:
-      "fig1 fig1"
-      "fig2 fig3";
+      "fig1"
+      "fig2"
+      "fig3";
     margin: 0 $grid-margin-studio $grid-margin-top-down $grid-margin-studio;
+  }
+}
+
+/* with min-width, its the min screen size to apply the following rules, lower than than change to the ones above,
+ here mean its mobile first
+ Can change for max-width for desktop first */
+@media (min-width: 850px) {
+  .studio-container {
+    @include grid-basic(repeat(2, 1fr), repeat(2, 60vh), $grid-gap) {
+      grid-template-areas:
+        "fig1 fig1"
+        "fig2 fig3";
+      margin: 0 $grid-margin-studio $grid-margin-top-down $grid-margin-studio;
+    }
+@for $i from 1 through 3 {
+    .studio-figure#{$i} {
+        grid-area: fig#{$i};
+    }
+}
+    
   }
 }
 
 /* ================================================================== */
 /*-- GALERIE ==================================================== */
+/* ================================================================== */
 
 .galerie-contenant-de-photos {
   @include grid-basic(repeat(6, 1fr), repeat(8, 25vh), $grid-gap) {
@@ -74,9 +150,14 @@
 
 /* ================================================================== */
 /*-- PRESTATION ==================================================== */
+/* ================================================================== */
 
 .prestations-grid1 {
-  @include grid-basic(repeat(2, 1fr), repeat(2, 30vh), $grid-margin-prestation) {
+  @include grid-basic(
+    repeat(2, 1fr),
+    repeat(2, 30vh),
+    $grid-margin-prestation
+  ) {
     grid-template-areas:
       "studioarticle studiofig1"
       "studioarticle studiofig2";
@@ -95,7 +176,11 @@
 }
 
 .prestations-grid2 {
-  @include grid-basic(repeat(2, 1fr), repeat(2, 30vh), $grid-margin-prestation) {
+  @include grid-basic(
+    repeat(2, 1fr),
+    repeat(2, 30vh),
+    $grid-margin-prestation
+  ) {
     grid-template-areas:
       "domicilearticle domicilefig1"
       "domicilearticle domicilefig2";
@@ -114,7 +199,11 @@
 }
 
 .prestations-grid3 {
-  @include grid-basic(repeat(2, 1fr), repeat(2, 30vh), $grid-margin-prestation) {
+  @include grid-basic(
+    repeat(2, 1fr),
+    repeat(2, 30vh),
+    $grid-margin-prestation
+  ) {
     grid-template-areas:
       "extarticle extfig1"
       "extarticle extfig2";
@@ -134,7 +223,9 @@
 
 /* ================================================================== */
 /*-- BLOG ==================================================== */
+/* ================================================================== */
 
+/* (repeat(2, 1fr), repeat(3, 50vh), $grid-gap 0.1em) */
 .blog-grid {
   @include grid-basic(repeat(2, 1fr), repeat(3, 50vh), $grid-gap 0.1em) {
     grid-template-areas:
@@ -168,13 +259,15 @@
 
 /* ================================================================== */
 /*-- ABOUTME ==================================================== */
+/* ================================================================== */
 
 .aboutme-grid-container {
   @include grid-basic(2fr 1fr, repeat(2, 45vh), 0em) {
     grid-template-areas:
       "photo text"
       "photo text";
-    margin: $grid-margin-top-down calc(10% + 2.7%) $grid-margin-top-down calc(10% - 2.7%);
+    margin: $grid-margin-top-down calc(10% + 2.7%) $grid-margin-top-down
+      calc(10% - 2.7%);
   }
 }
 .aboutme-photo-figure {

@@ -8,11 +8,37 @@
 /* ------------------------------------------------ */
 /* ------------------------------------------------ */
 /* NOT USED FOR TESTING PURPOSE------------------------------------------ */
-/*-- INDEX ACTUALITE INSTA ==================================================== */
+/*-- INDEX PRESTATION ==================================================== */
 @import url("https://fonts.googleapis.com/css2?family=Cinzel:wght@500&display=swap");
 @import url("https://fonts.googleapis.com/css2?family=Cinzel:wght@500&display=swap");
 @import url("https://fonts.googleapis.com/css2?family=Playfair+Display&display=swap");
 @import url("https://fonts.googleapis.com/css2?family=Poppins&display=swap");
+.index-prestation-1 {
+  -ms-grid-row: 1;
+  -ms-grid-column: 1;
+  -ms-grid-column-span: 3;
+  grid-area: index-presta1;
+}
+
+.index-prestation-2 {
+  -ms-grid-row: 2;
+  -ms-grid-column: 1;
+  grid-area: index-presta2;
+}
+
+.index-prestation-3 {
+  -ms-grid-row: 2;
+  -ms-grid-column: 2;
+  grid-area: index-presta3;
+}
+
+.index-prestation-4 {
+  -ms-grid-row: 2;
+  -ms-grid-column: 3;
+  grid-area: index-presta4;
+}
+
+/*-- INDEX ACTUALITE INSTA ==================================================== */
 .index-actu-figure1 {
   -ms-grid-row: 2;
   -ms-grid-column: 1;
@@ -73,7 +99,6 @@
 .studio-figure1 {
   -ms-grid-row: 1;
   -ms-grid-column: 1;
-  -ms-grid-column-span: 2;
   grid-area: fig1;
 }
 
@@ -84,8 +109,8 @@
 }
 
 .studio-figure3 {
-  -ms-grid-row: 2;
-  -ms-grid-column: 2;
+  -ms-grid-row: 3;
+  -ms-grid-column: 1;
   grid-area: fig3;
 }
 
@@ -661,37 +686,63 @@ li {
       grid-template-columns: repeat(3, 1fr);
   -ms-grid-rows: 0.1fr 0.1fr;
       grid-template-rows: 0.1fr 0.1fr;
-  gap: 0.2rem 5rem;
-      grid-template-areas: "prestah3 prestah3 prestah3" "presta1 presta2 presta3";
-  margin: 0 12%;
+  gap: 0 6vw;
+      grid-template-areas: "index-presta1 index-presta1 index-presta1" "index-presta2 index-presta3 index-presta4";
+  margin: 0 12vw;
   /* 0 parce que des top /down, et gauche et droite */
   /* margin: 10px 90px 10px 50px; : haut droite bas gauche */
-  padding: 4em 0;
+  padding: 0.5rem 0rem 4rem 0rem;
 }
 
-.index-prestations-container > h3 {
-  -ms-grid-row: 1;
-  -ms-grid-column: 1;
-  -ms-grid-column-span: 3;
-  grid-area: prestah3;
+.index-prestation-gen > figure {
+  height: 25vw;
 }
 
-.index-prestations-article-studio {
-  -ms-grid-row: 2;
-  -ms-grid-column: 1;
-  grid-area: presta1;
+.img-prestation-mediaQ3 {
+  -o-object-position: 50% 5%;
+     object-position: 50% 5%;
 }
 
-.index-prestations-article-domicile {
-  -ms-grid-row: 2;
-  -ms-grid-column: 2;
-  grid-area: presta2;
-}
-
-.index-prestations-article-exterieur {
-  -ms-grid-row: 2;
-  -ms-grid-column: 3;
-  grid-area: presta3;
+@media (max-width: 850px) {
+  .index-prestations-container {
+    display: -ms-grid;
+    display: grid;
+    -ms-grid-columns: 1fr;
+        grid-template-columns: 1fr;
+    -ms-grid-rows: 0.1fr 0.1fr;
+        grid-template-rows: 0.1fr 0.1fr;
+    gap: 1rem 0;
+        grid-template-areas: "index-presta1" "index-presta2"  "index-presta3"  "index-presta4";
+    margin: 0 15vw;
+    padding: 0.5rem 0rem 2rem 0rem;
+  }
+  .index-prestations-container .index-prestation-1 {
+    -ms-grid-row: 1;
+    -ms-grid-column: 1;
+    grid-area: index-presta1;
+  }
+  .index-prestations-container .index-prestation-2 {
+    -ms-grid-row: 2;
+    -ms-grid-column: 1;
+    grid-area: index-presta2;
+  }
+  .index-prestations-container .index-prestation-3 {
+    -ms-grid-row: 3;
+    -ms-grid-column: 1;
+    grid-area: index-presta3;
+  }
+  .index-prestations-container .index-prestation-4 {
+    -ms-grid-row: 4;
+    -ms-grid-column: 1;
+    grid-area: index-presta4;
+  }
+  .index-prestation-gen > figure {
+    height: 55vw;
+  }
+  .img-prestation-mediaQ3 {
+    -o-object-position: 50% 5%;
+       object-position: 50% 5%;
+  }
 }
 
 /*-- INDEX ACTUALITE INSTA ==================================================== */
@@ -718,20 +769,94 @@ li {
 /* check functions to get all actufig... wrote via function */
 /* ================================================================== */
 /*-- STUDIO ==================================================== */
+/* ================================================================== */
+.studio-article-container {
+  background-color: #f8f7f6;
+  margin: 2.5rem 8% 0 8%;
+  display: -ms-grid;
+  display: grid;
+  grid-auto-columns: minmax(-webkit-min-content, 100ch);
+  grid-auto-columns: minmax(min-content, 100ch);
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  gap: 1rem;
+}
+
+.studio-article-container h3 {
+  -ms-grid-column-align: center;
+      justify-self: center;
+  width: 80%;
+  margin: 1rem 1rem 0 1rem;
+}
+
+.studio-article-container .studio-article-0,
+.studio-article-container .studio-article-1 {
+  -ms-grid-column-align: center;
+      justify-self: center;
+  margin: 0rem 1rem 1rem 1rem;
+}
+
+@media screen and (min-width: 850px) {
+  .studio-article-container {
+    margin: 2.5rem 12% 0 12%;
+  }
+  h3 {
+    -ms-grid-column: 1;
+    -ms-grid-column-span: 2;
+    grid-column: 1 / span 2;
+  }
+}
+
+/*-- PHOTOS GRID ==================================================== */
 .studio-container {
   display: -ms-grid;
   display: grid;
-  -ms-grid-columns: (1fr)[2];
-      grid-template-columns: repeat(2, 1fr);
-  -ms-grid-rows: (60vh)[2];
-      grid-template-rows: repeat(2, 60vh);
+  -ms-grid-columns: 1fr;
+      grid-template-columns: 1fr;
+  -ms-grid-rows: (35vh)[2];
+      grid-template-rows: repeat(2, 35vh);
   gap: 2em;
-      grid-template-areas: "fig1 fig1" "fig2 fig3";
+      grid-template-areas: "fig1" "fig2" "fig3";
   margin: 0 8% 2.5rem 8%;
+}
+
+/* with min-width, its the min screen size to apply the following rules, lower than than change to the ones above,
+ here mean its mobile first
+ Can change for max-width for desktop first */
+@media (min-width: 850px) {
+  .studio-container {
+    display: -ms-grid;
+    display: grid;
+    -ms-grid-columns: (1fr)[2];
+        grid-template-columns: repeat(2, 1fr);
+    -ms-grid-rows: (60vh)[2];
+        grid-template-rows: repeat(2, 60vh);
+    gap: 2em;
+        grid-template-areas: "fig1 fig1" "fig2 fig3";
+    margin: 0 8% 2.5rem 8%;
+  }
+  .studio-container .studio-figure1 {
+    -ms-grid-row: 1;
+    -ms-grid-column: 1;
+    -ms-grid-column-span: 2;
+    grid-area: fig1;
+  }
+  .studio-container .studio-figure2 {
+    -ms-grid-row: 2;
+    -ms-grid-column: 1;
+    grid-area: fig2;
+  }
+  .studio-container .studio-figure3 {
+    -ms-grid-row: 2;
+    -ms-grid-column: 2;
+    grid-area: fig3;
+  }
 }
 
 /* ================================================================== */
 /*-- GALERIE ==================================================== */
+/* ================================================================== */
 .galerie-contenant-de-photos {
   display: -ms-grid;
   display: grid;
@@ -747,6 +872,7 @@ li {
 
 /* ================================================================== */
 /*-- PRESTATION ==================================================== */
+/* ================================================================== */
 .prestations-grid1 {
   display: -ms-grid;
   display: grid;
@@ -845,6 +971,8 @@ li {
 
 /* ================================================================== */
 /*-- BLOG ==================================================== */
+/* ================================================================== */
+/* (repeat(2, 1fr), repeat(3, 50vh), $grid-gap 0.1em) */
 .blog-grid {
   display: -ms-grid;
   display: grid;
@@ -898,6 +1026,7 @@ li {
 
 /* ================================================================== */
 /*-- ABOUTME ==================================================== */
+/* ================================================================== */
 .aboutme-grid-container {
   display: -ms-grid;
   display: grid;
@@ -999,7 +1128,15 @@ footer {
   height: auto;
 }
 
+/*-- BIENVENU MESSAGE ==================================================== */
 .index-main-article-bienvenu {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
   background-color: #f5f0ea;
   text-align: center;
   padding: 2rem 0;
@@ -1016,25 +1153,37 @@ footer {
 
 .index-prestations-container > h3 {
   text-align: center;
-}
-
-.index-prestations-article-studio {
-  text-align: center;
-}
-
-.index-prestations-article-domicile {
-  text-align: center;
-}
-
-.index-prestations-article-exterieur {
-  text-align: center;
+  -ms-flex-item-align: center;
+      -ms-grid-row-align: center;
+      align-self: center;
 }
 
 /* ========================================== */
-.index-prestations-article-studio p,
-.index-prestations-article-domicile p,
-.index-prestations-article-exterieur p {
-  text-align: left;
+.index-prestation-gen {
+  background-color: #f8f7f6;
+  border-radius: 0.2rem;
+}
+
+.index-prestation-gen h3 {
+  text-align: center;
+  padding: 0.5rem;
+}
+
+.index-prestation-gen p {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  padding: 0.5rem;
 }
 
 /*-- INDEX ACTUALITE INSTA ==================================================== */
@@ -1054,44 +1203,6 @@ footer {
 .index-actu-img5 {
   -o-object-position: 20% 75%;
      object-position: 20% 75%;
-}
-
-.studio-article-container {
-  background-color: #f8f7f6;
-  margin: 2.5rem 8% 0 8%;
-  display: -ms-grid;
-  display: grid;
-  gap: 1rem;
-  grid-auto-columns: minmax(-webkit-min-content, 100ch);
-  grid-auto-columns: minmax(min-content, 100ch);
-  -webkit-box-pack: center;
-      -ms-flex-pack: center;
-          justify-content: center;
-}
-
-.studio-article-container h3 {
-  -ms-grid-column-align: center;
-      justify-self: center;
-  width: 80%;
-  margin: 1rem 1rem 0 1rem;
-}
-
-.studio-article-container .studio-article-0,
-.studio-article-container .studio-article-1 {
-  -ms-grid-column-align: center;
-      justify-self: center;
-  margin: 0rem 1rem 1rem 1rem;
-}
-
-@media (min-width: 850px) {
-  .studio-article-container {
-    margin: 2.5rem 12% 0 12%;
-  }
-  h3 {
-    -ms-grid-column: 1;
-    -ms-grid-column-span: 2;
-    grid-column: 1 / span 2;
-  }
 }
 
 .galerie-container {
