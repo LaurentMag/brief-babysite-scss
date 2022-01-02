@@ -18,7 +18,7 @@
 //   padding-left: 2em;
 // }
 
-.prestation-common-style {
+.prestation-article-common-style {
   background-color: $text-background-color;
   display: flex;
   flex-direction: column;
@@ -27,19 +27,19 @@
   border-radius: 0.2rem;
   h3 {
     width: 80%;
-    margin-top: 3rem;
+    margin-top: 3vw;
   }
   p {
     width: 80%;
   }
 }
 
-.fas {
-  box-shadow: 1px 1px 3px red, -1px -1px 3px red;
-  color: rgba(189, 185, 180, 0.7);
-  font-size: 3.5rem;
-  padding: 1rem;
-  border: 1px solid rgba(189, 185, 180, 0.7);
-  border-radius: 0.2em;
+// .fas {
+//   box-shadow: 1px 1px 3px red, -1px -1px 3px red;
+//   color: rgba(189, 185, 180, 0.7);
+//   font-size: 3.5rem;
+//   padding: 1rem;
+//   border: 1px solid rgba(189, 185, 180, 0.7);
+//   border-radius: 0.2em;
 
-}
+// }

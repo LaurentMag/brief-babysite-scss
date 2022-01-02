@@ -3,6 +3,17 @@
   height: 100%;
   justify-self: end;
 }
+@media screen and (max-width: 850px) { 
+  .aboutme-photo-figure {
+    width: 100%;
+    justify-self: center;
+  }
+  .aboutme-article {
+    h3 {
+      margin-top: 2vw;
+    }
+  }
+}
 
 .aboutme-photo {
   @include img-border-shadow(
@@ -24,8 +35,8 @@
   display: flex;
   flex-direction: column;
   justify-content: center;
-  align-items: center;
-  z-index: -1; /* sinon pass au dessus navbar à cause de la position relative */
+  align-items: center; /* otherwise on top of the picture */
+  z-index: -1;
   h3 {
     width: 80%;
   }

@@ -4,7 +4,7 @@
     grid-template-areas:
       "index-presta1 index-presta1 index-presta1"
       "index-presta2 index-presta3 index-presta4";
-    margin: 0 $grid-margin-general;
+    margin: 0 $grid-margin-side-general;
     /* 0 parce que des top /down, et gauche et droite */
     /* margin: 10px 90px 10px 50px; : haut droite bas gauche */
     padding: 0.5rem 0rem 4rem 0rem;
@@ -16,7 +16,7 @@
 .img-prestation-mediaQ3 {
   object-position: 50% 5%;
 }
-
+/* ================================================================== */
 @media (max-width: 850px) {
   .index-prestations-container {
     @include grid-basic(1fr, 0.1fr 0.1fr, 1rem 0) {
@@ -51,7 +51,7 @@
 //       "actufig1 actufig2 actufig3 actufig4"
 //       "actufig5 actufig6 actufig7 actufig8";
 //       /* check functions to get all actufig... wrote via function */
-//     margin: 0rem $grid-margin-general;
+//     margin: 0rem $grid-margin-side-general;
 //     padding: 3rem 0 5rem 0;
 //   }
 // }
@@ -63,7 +63,7 @@
   display: grid;
   grid-template-columns: repeat(4, minmax(250px, 1fr));
   gap: 1rem;
-  margin: 0rem $grid-margin-general;
+  margin: 0rem $grid-margin-side-general;
   padding: 3rem 0 5rem 0;
 }
 .index-actu-insta-container > h3 {
@@ -74,7 +74,7 @@
 .index-actu-insta-figure {
   max-height: 20vw;
 }
-
+/* ================================================================== */
 @media screen and (max-width: 1200px) {
   .index-actu-insta-container {
     grid-template-columns: repeat(2, minmax(250px, 1fr));
@@ -86,7 +86,7 @@
     max-height: 25vw;
   }
 }
-
+/* ================================================================== */
 @media screen and (max-width: 850px) {
   .index-actu-insta-container {
     grid-template-columns: minmax(250px, 1fr);
@@ -121,10 +121,11 @@
     margin: 0rem 1rem 1rem 1rem;
   }
 }
-
+/* ================================================================== */
 @media screen and (min-width: 850px) {
   .studio-article-container {
-    margin: $grid-margin-top-down $grid-margin-general 0 $grid-margin-general;
+    margin: $grid-margin-top-down $grid-margin-side-general 0
+      $grid-margin-side-general;
   }
   h3 {
     grid-column: 1 / span 2;
@@ -142,7 +143,7 @@
     margin: 0 $grid-margin-studio $grid-margin-top-down $grid-margin-studio;
   }
 }
-
+/* ================================================================== */
 /* with min-width, its the min screen size to apply the following rules, lower than than change to the ones above,
  here mean its mobile first
  Can change for max-width for desktop first */
@@ -181,7 +182,8 @@
     margin: $grid-margin-top-down $grid-margin-studio;
   }
 }
-@media (max-width: 900px) {
+/* ================================================================== */
+@media screen and (max-width: 900px) {
   .galerie-contenant-de-photos {
     grid-template-columns: repeat(4, 1fr);
     grid-template-areas:
@@ -200,37 +202,35 @@
     }
   }
 }
-
-@media (max-width: 700px) {
+/* ================================================================== */
+@media screen and (max-width: 700px) {
   .galerie-contenant-de-photos {
     display: grid;
     grid-template-columns: repeat(2, 1fr);
     grid-template-rows: repeat(16, minmax(200px, 30vw));
-    grid-template-areas: 
-    "img1 img1"
-    "img1 img1"
-    "img2 img2"
-    "img2 img2"
-    "img3 img3"
-    "img4 img4"
-    "img4 img4"
-    "img5 img5"
-    "img5 img5"
-    "img6 img6"
-    "img7 img7"
-    "img7 img7"
-    "img8 img8"
-    "img8 img8"
-    "img9 img9"
-    "img9 img9";
+    grid-template-areas:
+      "img1 img1"
+      "img1 img1"
+      "img2 img2"
+      "img2 img2"
+      "img3 img3"
+      "img4 img4"
+      "img4 img4"
+      "img5 img5"
+      "img5 img5"
+      "img6 img6"
+      "img7 img7"
+      "img7 img7"
+      "img8 img8"
+      "img8 img8"
+      "img9 img9"
+      "img9 img9";
   }
   @for $i from 1 through 9 {
     .galerie-figure#{$i} {
       grid-area: img#{$i};
     }
   }
-
-  
 }
 
 /* ================================================================== */
@@ -240,14 +240,14 @@
 .prestations-grid1 {
   @include grid-basic(
     repeat(2, 1fr),
-    repeat(2, 30vh),
+    repeat(2, $grid-prestation-rows-size),
     $grid-margin-prestation
   ) {
     grid-template-areas:
       "studioarticle studiofig1"
       "studioarticle studiofig2";
-    margin: $grid-margin-top-down auto $grid-margin-prestations-big-down auto;
-    width: 80%;
+    margin: $grid-margin-top-down $grid-margin-side-general
+      $grid-margin-prestations-big-down $grid-margin-side-general;
   }
 }
 .prestations-studio-article {
@@ -260,17 +260,40 @@
   grid-area: studiofig2;
 }
 
+@media screen and (max-width: 850px) {
+  .prestations-grid1 {
+    grid-template-columns: minmax(200px, 1fr);
+    grid-template-rows: auto repeat(2, $grid-prestation-rows-size);
+    margin: 15vw $grid-margin-side-general 15vw $grid-margin-side-general;
+    /* auto will let row adapt depending of the content size: here the text */
+    grid-template-areas:
+      "studioarticle"
+      "studiofig1"
+      "studiofig2";
+  }
+  .prestations-studio-article {
+    grid-area: studioarticle;
+  }
+  .prestations-studio-figure1 {
+    grid-area: studiofig1;
+  }
+  .prestations-studio-figure2 {
+    grid-area: studiofig2;
+  }
+}
+
+/* ================================================================== */
 .prestations-grid2 {
   @include grid-basic(
     repeat(2, 1fr),
-    repeat(2, 30vh),
+    repeat(2, $grid-prestation-rows-size),
     $grid-margin-prestation
   ) {
     grid-template-areas:
       "domicilearticle domicilefig1"
       "domicilearticle domicilefig2";
-    margin: $grid-margin-top-down auto $grid-margin-prestations-big-down auto;
-    width: 80%;
+    margin: $grid-margin-top-down $grid-margin-side-general
+      $grid-margin-prestations-big-down $grid-margin-side-general;
   }
 }
 .prestations-domicile-article {
@@ -283,17 +306,40 @@
   grid-area: domicilefig2;
 }
 
+@media screen and (max-width: 850px) {
+  .prestations-grid2 {
+    grid-template-columns: minmax(230px, 1fr);
+    grid-template-rows: auto repeat(2, $grid-prestation-rows-size);
+    margin: 15vw $grid-margin-side-general 15vw $grid-margin-side-general;
+    /* auto will let row adapt depending of the content size: here the text */
+    grid-template-areas:
+      "domicilearticle"
+      "domicilefig1"
+      "domicilefig2";
+  }
+  .prestations-domicile-article {
+    grid-area: domicilearticle;
+  }
+  .prestations-domicile-figure1 {
+    grid-area: domicilefig1;
+  }
+  .prestations-domicile-figure2 {
+    grid-area: domicilefig2;
+  }
+}
+
+/* ================================================================== */
 .prestations-grid3 {
   @include grid-basic(
     repeat(2, 1fr),
-    repeat(2, 30vh),
+    repeat(2, $grid-prestation-rows-size),
     $grid-margin-prestation
   ) {
     grid-template-areas:
       "extarticle extfig1"
       "extarticle extfig2";
-    margin: $grid-margin-top-down auto $grid-margin-prestations-big-down auto;
-    width: 80%;
+    margin: $grid-margin-top-down $grid-margin-side-general
+      $grid-margin-prestations-big-down $grid-margin-side-general;
   }
 }
 .prestations-exterieur-article {
@@ -306,18 +352,40 @@
   grid-area: extfig2;
 }
 
+@media screen and (max-width: 850px) {
+  .prestations-grid3 {
+    grid-template-columns: minmax(200px, 1fr);
+    grid-template-rows: auto repeat(2, $grid-prestation-rows-size);
+    /* auto will let row adapt depending of the content size: here the text */
+    margin: 15vw $grid-margin-side-general 15vw $grid-margin-side-general;
+    grid-template-areas:
+      "extarticle"
+      "extfig1"
+      "extfig2";
+  }
+  .prestations-exterieur-article {
+    grid-area: extarticle;
+  }
+  .prestations-exterieur-figure1 {
+    grid-area: extfig1;
+  }
+  .prestations-exterieur-figure2 {
+    grid-area: extfig2;
+  }
+}
+
 /* ================================================================== */
 /*-- BLOG ==================================================== */
 /* ================================================================== */
 
-/* (repeat(2, 1fr), repeat(3, 50vh), $grid-gap 0.1em) */
 .blog-grid {
-  @include grid-basic(repeat(2, 1fr), repeat(3, 50vh), $grid-gap 0.1em) {
+  @include grid-basic(repeat(2, 1fr), repeat(3, 33rem), $grid-gap 0.1em) {
     grid-template-areas:
       "article1 art1fig"
       "art2fig article2"
       "article3 art3fig";
-    margin: $grid-margin-top-down auto $grid-margin-prestations-big-down auto;
+    margin: $grid-margin-top-down $grid-margin-side-general
+      $grid-margin-prestations-big-down $grid-margin-side-general;
     width: 80%;
   }
 }
@@ -342,6 +410,46 @@
   grid-area: art3fig;
 }
 
+@media screen and (max-width: 850px) {
+  .blog-grid {
+    grid-template-columns: minmax(220px, 1fr);
+    grid-template-rows: 25rem auto 25rem auto 25rem auto;
+    gap: 0rem;
+    margin: $grid-margin-top-down auto $grid-margin-prestations-big-down auto;
+    grid-template-areas:
+      "art1fig"
+      "article1"
+      "art2fig"
+      "article2"
+      "art3fig"
+      "article3";
+  }
+  .blog-figure-article2,
+  .blog-figure-article3 {
+    margin-top: 2rem;
+  }
+  .blog-article1 {
+    grid-area: article1;
+  }
+  .blog-figure-article1 {
+    grid-area: art1fig;
+  }
+  /* ================================================================== */
+  .blog-article2 {
+    grid-area: article2;
+  }
+  .blog-figure-article2 {
+    grid-area: art2fig;
+  }
+  /* ================================================================== */
+  .blog-article3 {
+    grid-area: article3;
+  }
+  .blog-figure-article3 {
+    grid-area: art3fig;
+  }
+}
+
 /* ================================================================== */
 /*-- ABOUTME ==================================================== */
 /* ================================================================== */
@@ -360,4 +468,22 @@
 }
 .aboutme-article {
   grid-area: text;
+}
+
+@media screen and (max-width: 850px) {
+  .aboutme-grid-container {
+    grid-template-columns: minmax(220px, 1fr);
+    grid-template-rows: auto;
+    margin: $grid-margin-top-down $grid-margin-side-general
+      $grid-margin-top-down $grid-margin-side-general;
+    grid-template-areas:
+      "photo"
+      "text";
+  }
+  .aboutme-photo-figure {
+    grid-area: photo;
+  }
+  .aboutme-article {
+    grid-area: text;
+  }
 }
