@@ -75,7 +75,6 @@
   max-height: 20vw;
 }
 
-
 @media screen and (max-width: 1200px) {
   .index-actu-insta-container {
     grid-template-columns: repeat(2, minmax(250px, 1fr));
@@ -149,7 +148,7 @@
  Can change for max-width for desktop first */
 @media (min-width: 850px) {
   .studio-container {
-    @include grid-basic(repeat(2, 1fr), repeat(2, 60vh), $grid-gap) {
+    @include grid-basic(repeat(2, 1fr), repeat(2, 35vw), $grid-gap) {
       grid-template-areas:
         "fig1 fig1"
         "fig2 fig3";
@@ -159,6 +158,7 @@
       .studio-figure#{$i} {
         grid-area: fig#{$i};
       }
+      /* for somes reasons need to add back the area in the media otherwise scss do not see them 🤷‍♂️ */
     }
   }
 }
@@ -168,7 +168,7 @@
 /* ================================================================== */
 
 .galerie-contenant-de-photos {
-  @include grid-basic(repeat(6, 1fr), repeat(8, 25vh), $grid-gap) {
+  @include grid-basic(repeat(6, 1fr), repeat(8, 14vw), $grid-gap) {
     grid-template-areas:
       "img1 img1 img2 img2 img2 img2"
       "img1 img1 img3 img3 img4 img4"
@@ -178,9 +178,59 @@
       "img6 img6 img6 img6 img7 img7"
       "img8 img8 img8 img9 img9 img9"
       "img8 img8 img8 img9 img9 img9";
-    width: 90%;
-    margin: $grid-margin-top-down 0;
+    margin: $grid-margin-top-down $grid-margin-studio;
   }
+}
+@media (max-width: 900px) {
+  .galerie-contenant-de-photos {
+    grid-template-columns: repeat(4, 1fr);
+    grid-template-areas:
+      "img1 img1 img2 img2"
+      "img1 img1 img2 img2"
+      "img3 img3 img4 img4"
+      "img5 img5 img4 img4"
+      "img5 img5 img7 img7"
+      "img6 img6 img7 img7"
+      "img8 img8 img9 img9"
+      "img8 img8 img9 img9";
+  }
+  @for $i from 1 through 9 {
+    .galerie-figure#{$i} {
+      grid-area: img#{$i};
+    }
+  }
+}
+
+@media (max-width: 700px) {
+  .galerie-contenant-de-photos {
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+    grid-template-rows: repeat(16, minmax(200px, 30vw));
+    grid-template-areas: 
+    "img1 img1"
+    "img1 img1"
+    "img2 img2"
+    "img2 img2"
+    "img3 img3"
+    "img4 img4"
+    "img4 img4"
+    "img5 img5"
+    "img5 img5"
+    "img6 img6"
+    "img7 img7"
+    "img7 img7"
+    "img8 img8"
+    "img8 img8"
+    "img9 img9"
+    "img9 img9";
+  }
+  @for $i from 1 through 9 {
+    .galerie-figure#{$i} {
+      grid-area: img#{$i};
+    }
+  }
+
+  
 }
 
 /* ================================================================== */

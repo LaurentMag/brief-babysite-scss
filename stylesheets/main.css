@@ -39,54 +39,8 @@
 }
 
 /*-- INDEX ACTUALITE INSTA ==================================================== */
-.index-actu-figure1 {
-  grid-area: actufig1;
-  -ms-grid-column-align: center;
-      justify-self: center;
-}
-
-.index-actu-figure2 {
-  grid-area: actufig2;
-  -ms-grid-column-align: center;
-      justify-self: center;
-}
-
-.index-actu-figure3 {
-  grid-area: actufig3;
-  -ms-grid-column-align: center;
-      justify-self: center;
-}
-
-.index-actu-figure4 {
-  grid-area: actufig4;
-  -ms-grid-column-align: center;
-      justify-self: center;
-}
-
-.index-actu-figure5 {
-  grid-area: actufig5;
-  -ms-grid-column-align: center;
-      justify-self: center;
-}
-
-.index-actu-figure6 {
-  grid-area: actufig6;
-  -ms-grid-column-align: center;
-      justify-self: center;
-}
-
-.index-actu-figure7 {
-  grid-area: actufig7;
-  -ms-grid-column-align: center;
-      justify-self: center;
-}
-
-.index-actu-figure8 {
-  grid-area: actufig8;
-  -ms-grid-column-align: center;
-      justify-self: center;
-}
-
+/* not used anymore as changed how grid are handleded, dont need areas anymore there
+just keeping the code as "reminder" */
 /*-- STUDIO ==================================================== */
 .studio-figure1 {
   -ms-grid-row: 1;
@@ -854,11 +808,14 @@ li {
     display: grid;
     -ms-grid-columns: (1fr)[2];
         grid-template-columns: repeat(2, 1fr);
-    -ms-grid-rows: (60vh)[2];
-        grid-template-rows: repeat(2, 60vh);
+    -ms-grid-rows: (35vw)[2];
+        grid-template-rows: repeat(2, 35vw);
     gap: 2em;
         grid-template-areas: "fig1 fig1" "fig2 fig3";
     margin: 0 8vw 2.5rem 8vw;
+    /* for somes reasons need to add back the area in the media otherwise scss do not see them 🤷‍♂️ */
+    /* for somes reasons need to add back the area in the media otherwise scss do not see them 🤷‍♂️ */
+    /* for somes reasons need to add back the area in the media otherwise scss do not see them 🤷‍♂️ */
   }
   .studio-container .studio-figure1 {
     -ms-grid-row: 1;
@@ -886,12 +843,153 @@ li {
   display: grid;
   -ms-grid-columns: (1fr)[6];
       grid-template-columns: repeat(6, 1fr);
-  -ms-grid-rows: (25vh)[8];
-      grid-template-rows: repeat(8, 25vh);
+  -ms-grid-rows: (14vw)[8];
+      grid-template-rows: repeat(8, 14vw);
   gap: 2em;
       grid-template-areas: "img1 img1 img2 img2 img2 img2" "img1 img1 img3 img3 img4 img4" "img5 img5 img5 img5 img4 img4" "img5 img5 img5 img5 img4 img4" "img5 img5 img5 img5 img7 img7" "img6 img6 img6 img6 img7 img7" "img8 img8 img8 img9 img9 img9" "img8 img8 img8 img9 img9 img9";
-  width: 90%;
-  margin: 2.5rem 0;
+  margin: 2.5rem 8vw;
+}
+
+@media (max-width: 900px) {
+  .galerie-contenant-de-photos {
+    -ms-grid-columns: (1fr)[4];
+        grid-template-columns: repeat(4, 1fr);
+        grid-template-areas: "img1 img1 img2 img2" "img1 img1 img2 img2" "img3 img3 img4 img4" "img5 img5 img4 img4" "img5 img5 img7 img7" "img6 img6 img7 img7" "img8 img8 img9 img9" "img8 img8 img9 img9";
+  }
+  .galerie-figure1 {
+    -ms-grid-row: 1;
+    -ms-grid-row-span: 2;
+    -ms-grid-column: 1;
+    -ms-grid-column-span: 2;
+    grid-area: img1;
+  }
+  .galerie-figure2 {
+    -ms-grid-row: 1;
+    -ms-grid-row-span: 2;
+    -ms-grid-column: 3;
+    -ms-grid-column-span: 2;
+    grid-area: img2;
+  }
+  .galerie-figure3 {
+    -ms-grid-row: 3;
+    -ms-grid-column: 1;
+    -ms-grid-column-span: 2;
+    grid-area: img3;
+  }
+  .galerie-figure4 {
+    -ms-grid-row: 3;
+    -ms-grid-row-span: 2;
+    -ms-grid-column: 3;
+    -ms-grid-column-span: 2;
+    grid-area: img4;
+  }
+  .galerie-figure5 {
+    -ms-grid-row: 4;
+    -ms-grid-row-span: 2;
+    -ms-grid-column: 1;
+    -ms-grid-column-span: 2;
+    grid-area: img5;
+  }
+  .galerie-figure6 {
+    -ms-grid-row: 6;
+    -ms-grid-column: 1;
+    -ms-grid-column-span: 2;
+    grid-area: img6;
+  }
+  .galerie-figure7 {
+    -ms-grid-row: 5;
+    -ms-grid-row-span: 2;
+    -ms-grid-column: 3;
+    -ms-grid-column-span: 2;
+    grid-area: img7;
+  }
+  .galerie-figure8 {
+    -ms-grid-row: 7;
+    -ms-grid-row-span: 2;
+    -ms-grid-column: 1;
+    -ms-grid-column-span: 2;
+    grid-area: img8;
+  }
+  .galerie-figure9 {
+    -ms-grid-row: 7;
+    -ms-grid-row-span: 2;
+    -ms-grid-column: 3;
+    -ms-grid-column-span: 2;
+    grid-area: img9;
+  }
+}
+
+@media (max-width: 700px) {
+  .galerie-contenant-de-photos {
+    display: -ms-grid;
+    display: grid;
+    -ms-grid-columns: (1fr)[2];
+        grid-template-columns: repeat(2, 1fr);
+    -ms-grid-rows: (minmax(200px, 30vw))[16];
+        grid-template-rows: repeat(16, minmax(200px, 30vw));
+        grid-template-areas: "img1 img1" "img1 img1" "img2 img2" "img2 img2" "img3 img3" "img4 img4" "img4 img4" "img5 img5" "img5 img5" "img6 img6" "img7 img7" "img7 img7" "img8 img8" "img8 img8" "img9 img9" "img9 img9";
+  }
+  .galerie-figure1 {
+    -ms-grid-row: 1;
+    -ms-grid-row-span: 2;
+    -ms-grid-column: 1;
+    -ms-grid-column-span: 2;
+    grid-area: img1;
+  }
+  .galerie-figure2 {
+    -ms-grid-row: 3;
+    -ms-grid-row-span: 2;
+    -ms-grid-column: 1;
+    -ms-grid-column-span: 2;
+    grid-area: img2;
+  }
+  .galerie-figure3 {
+    -ms-grid-row: 5;
+    -ms-grid-column: 1;
+    -ms-grid-column-span: 2;
+    grid-area: img3;
+  }
+  .galerie-figure4 {
+    -ms-grid-row: 6;
+    -ms-grid-row-span: 2;
+    -ms-grid-column: 1;
+    -ms-grid-column-span: 2;
+    grid-area: img4;
+  }
+  .galerie-figure5 {
+    -ms-grid-row: 8;
+    -ms-grid-row-span: 2;
+    -ms-grid-column: 1;
+    -ms-grid-column-span: 2;
+    grid-area: img5;
+  }
+  .galerie-figure6 {
+    -ms-grid-row: 10;
+    -ms-grid-column: 1;
+    -ms-grid-column-span: 2;
+    grid-area: img6;
+  }
+  .galerie-figure7 {
+    -ms-grid-row: 11;
+    -ms-grid-row-span: 2;
+    -ms-grid-column: 1;
+    -ms-grid-column-span: 2;
+    grid-area: img7;
+  }
+  .galerie-figure8 {
+    -ms-grid-row: 13;
+    -ms-grid-row-span: 2;
+    -ms-grid-column: 1;
+    -ms-grid-column-span: 2;
+    grid-area: img8;
+  }
+  .galerie-figure9 {
+    -ms-grid-row: 15;
+    -ms-grid-row-span: 2;
+    -ms-grid-column: 1;
+    -ms-grid-column-span: 2;
+    grid-area: img9;
+  }
 }
 
 /* ================================================================== */

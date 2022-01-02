@@ -35,12 +35,16 @@
     }
 }
 /*-- INDEX ACTUALITE INSTA ==================================================== */
-@for $i from 1 through 8 {
-    .index-actu-figure#{$i} {
-        grid-area: actufig#{$i};
-        justify-self: center;
-    }
-}
+// @for $i from 1 through 8 {
+//     .index-actu-figure#{$i} {
+//         grid-area: actufig#{$i};
+//         justify-self: center;
+//     }
+// }
+
+/* not used anymore as changed how grid are handleded, dont need areas anymore there
+just keeping the code as "reminder" */
+
 /*-- STUDIO ==================================================== */
 @for $i from 1 through 3 {
     .studio-figure#{$i} {
