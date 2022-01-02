@@ -24,3 +24,21 @@ footer {
     width: $footer-socialmedia-icon-width;
     height: auto;
   }
+
+  @media screen and (max-width: 850px) {
+    footer {
+      flex-direction: column;
+    }
+
+    .footercopytxt {
+      margin: 0 auto;
+    }
+  
+    .footerfigure {
+      margin: 1.3rem auto;
+    }
+    .socialmedia {
+      width: $footer-socialmedia-icon-width;
+      height: auto;
+    }
+  }

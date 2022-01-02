@@ -8,7 +8,8 @@
 
 <head>
   <meta charset="utf-8">
-  <title>photograph baby</title>
+  <title>photograph baby scss</title>
+  <link rel="icon" type="image/x-icon" href="img/pngable_camera-icon.png">
   <meta name="description" content="">
   <meta name="viewport" content="width=device-width, initial-scale=1">
 
@@ -17,8 +18,7 @@
   <meta property="og:url" content="">
   <meta property="og:image" content="">
 
-  <link rel="stylesheet" href="css/all.min.css"
-  <!-- call fontawesome -->
+  <link rel="stylesheet" href="css/all.min.css" <!-- call fontawesome -->
 
   <link rel="manifest" href="site.webmanifest">
   <link rel="apple-touch-icon" href="icon.png">
@@ -41,7 +41,7 @@
   <header>
     <figure>
       <a href="index.html">
-      <img class="header-img" src="img/pngable_camera-icon.png" alt="logo du site">
+        <img class="header-img" src="img/pngable_camera-icon.png" alt="logo du site">
       </a>
     </figure>
   </header>
@@ -60,7 +60,50 @@
     </ul>
   </nav>
 
-  <section class="containerTemp">
+  <section>
+    <form class="form-container">
+
+      <p>
+        <label for="nom">Nom* :</label>
+        <input type="text" name="Nom" id="nom" placeholder="Entrer votre nom.." pattern="[A-Z]{1}[a-zéèàç]{2,}"
+          required>
+
+        <label for="prenom">Prénom* :</label>
+        <input type="text" name="Prénom" id="prenom" placeholder="Entrer votre prénom.." pattern="[A-Z]{1}[a-zéèàç]{2,}"
+          required>
+      </p>
+
+      <p> <label for="email">Adresse mail*</label>
+        <input type="email" name="Email" id="email" placeholder="Email.." required>
+      </p>
+
+      <p> <label for="ville">Ville*</label>
+        <input type="text" name="ville" id="ville" placeholder="ville.." pattern="[A-Z]{1}[a-zéèàç\s]{2,}">
+      </p>
+
+
+      <p> <label for="pkcontact"> Raison de contact: </label>
+        <select id="pkcontact" name="raison-de-contact">
+          <option value="info-complementaire">Information(s) complémentaire</option>
+          <option value="prix">Demande de prix</option>
+          <option value="question formules">Question sur mes prestations</option>
+        </select>
+      </p>
+
+
+      <p> <label for="textarea">Message:</label>
+        <textarea id="textarea" name="pavet" rows="8" cols="25">
+           
+        </textarea>
+      </p>
+
+
+      <input type="submit" value="Submit">
+
+
+    </form>
+
+
   </section>
 
 

@@ -99,9 +99,9 @@
   }
 }
 
-/* ================================================================== */
-/*-- STUDIO ==================================================== */
-/* ================================================================== */
+/* ====================================================================================================== */
+/*-- STUDIO ========================================================================================== */
+/* ====================================================================================================== */
 
 .studio-article-container {
   background-color: $text-background-color;
@@ -164,9 +164,9 @@
   }
 }
 
-/* ================================================================== */
-/*-- GALERIE ==================================================== */
-/* ================================================================== */
+/* ====================================================================================================== */
+/*-- GALERIE ========================================================================================== */
+/* ====================================================================================================== */
 
 .galerie-contenant-de-photos {
   @include grid-basic(repeat(6, 1fr), repeat(8, 14vw), $grid-gap) {
@@ -233,9 +233,9 @@
   }
 }
 
-/* ================================================================== */
-/*-- PRESTATION ==================================================== */
-/* ================================================================== */
+/* ====================================================================================================== */
+/*-- PRESTATION ========================================================================================== */
+/* ====================================================================================================== */
 
 .prestations-grid1 {
   @include grid-basic(
@@ -263,13 +263,13 @@
 @media screen and (max-width: 850px) {
   .prestations-grid1 {
     grid-template-columns: minmax(200px, 1fr);
-    grid-template-rows: auto repeat(2, $grid-prestation-rows-size);
+    grid-template-rows: repeat(2, $grid-prestation-rows-size) auto;
     margin: 15vw $grid-margin-side-general 15vw $grid-margin-side-general;
     /* auto will let row adapt depending of the content size: here the text */
     grid-template-areas:
-      "studioarticle"
-      "studiofig1"
-      "studiofig2";
+    "studiofig1"
+    "studiofig2"
+    "studioarticle";
   }
   .prestations-studio-article {
     grid-area: studioarticle;
@@ -309,13 +309,13 @@
 @media screen and (max-width: 850px) {
   .prestations-grid2 {
     grid-template-columns: minmax(230px, 1fr);
-    grid-template-rows: auto repeat(2, $grid-prestation-rows-size);
+    grid-template-rows: repeat(2, $grid-prestation-rows-size) auto;
     margin: 15vw $grid-margin-side-general 15vw $grid-margin-side-general;
     /* auto will let row adapt depending of the content size: here the text */
     grid-template-areas:
-      "domicilearticle"
-      "domicilefig1"
-      "domicilefig2";
+    "domicilefig1"
+    "domicilefig2"
+    "domicilearticle";
   }
   .prestations-domicile-article {
     grid-area: domicilearticle;
@@ -355,13 +355,13 @@
 @media screen and (max-width: 850px) {
   .prestations-grid3 {
     grid-template-columns: minmax(200px, 1fr);
-    grid-template-rows: auto repeat(2, $grid-prestation-rows-size);
+    grid-template-rows: repeat(2, $grid-prestation-rows-size) auto;
     /* auto will let row adapt depending of the content size: here the text */
     margin: 15vw $grid-margin-side-general 15vw $grid-margin-side-general;
     grid-template-areas:
-      "extarticle"
-      "extfig1"
-      "extfig2";
+    "extfig1"
+    "extfig2"
+    "extarticle";
   }
   .prestations-exterieur-article {
     grid-area: extarticle;
@@ -374,9 +374,9 @@
   }
 }
 
-/* ================================================================== */
-/*-- BLOG ==================================================== */
-/* ================================================================== */
+/* ====================================================================================================== */
+/*-- BLOG ========================================================================================== */
+/* ====================================================================================================== */
 
 .blog-grid {
   @include grid-basic(repeat(2, 1fr), repeat(3, 33rem), $grid-gap 0.1em) {
@@ -424,6 +424,14 @@
       "art3fig"
       "article3";
   }
+  .blog-article-common-style {
+    h3 {
+      margin-top: 1.5rem;
+    }
+    p {
+      margin-bottom: 1.5rem;
+    }
+  }
   .blog-figure-article2,
   .blog-figure-article3 {
     margin-top: 2rem;
@@ -450,9 +458,9 @@
   }
 }
 
-/* ================================================================== */
-/*-- ABOUTME ==================================================== */
-/* ================================================================== */
+/* ====================================================================================================== */
+/*-- ABOUTME ========================================================================================== */
+/* ====================================================================================================== */
 
 .aboutme-grid-container {
   @include grid-basic(2fr 1fr, repeat(2, 45vh), 0em) {

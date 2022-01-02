@@ -1,0 +1,62 @@
+*, *before, *after {
+    box-sizing: border-box;
+}
+/* the width and height contain now the padding of the element */
+
+.form-container {
+    background-color: rgb(248, 247, 246);
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    margin: 0 20vw;
+}
+
+label {
+    font-family: $font-h3-default;
+    font-size: 1.6em;
+    font-weight: bold;
+    display: block;
+    padding: 1rem;
+    margin: 0.4rem 0 0 0;
+}
+
+input[type=text], [type=email], textarea, select {
+    font-family: $font-p-default;
+    font-size: $paragraph-text-size;
+    width: 30vw;
+    display: block;
+    border: 1px solid black;
+    border-radius: 0.3rem;
+    padding: 0.5rem;
+    margin: 0 0 1rem 0;
+}
+
+input[type=submit] {
+    font-family: $font-navbar;
+    font-size: 1.6em;
+    font-weight: bold;
+    color:rgb(248, 247, 246);
+    background-color:rgb(131, 97, 134);
+    padding: 1rem 2rem;
+    border-radius: 20px;
+    width: 20%;
+    box-shadow: 10px 10px 10px rgba(128, 128, 128, 0.185);
+    margin: 0 0 2rem 0;
+    cursor: pointer;
+}
+input[type=submit]:hover {
+    background-color:rgb(194, 160, 197);
+  }
+
+  @media screen and (max-width: 850px) {
+      .form-container {
+          margin: 0 5vw;
+      }
+      input[type=submit] { 
+          width: 60%
+      }
+      input[type=text], [type=email], textarea, select {
+        width: 80%
+    }
+  }

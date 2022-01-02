@@ -586,8 +586,14 @@ header figure {
 }
 
 .header-img {
-  width: 10rem;
+  width: 7rem;
   height: auto;
+}
+
+@media screen and (max-width: 850px) {
+  .header-img {
+    width: 6.5rem;
+  }
 }
 
 nav {
@@ -748,9 +754,9 @@ li {
   }
 }
 
-/* ================================================================== */
-/*-- STUDIO ==================================================== */
-/* ================================================================== */
+/* ====================================================================================================== */
+/*-- STUDIO ========================================================================================== */
+/* ====================================================================================================== */
 .studio-article-container {
   background-color: #f8f7f6;
   margin: 2.5rem 8vw 0 8vw;
@@ -840,9 +846,9 @@ li {
   }
 }
 
-/* ================================================================== */
-/*-- GALERIE ==================================================== */
-/* ================================================================== */
+/* ====================================================================================================== */
+/*-- GALERIE ========================================================================================== */
+/* ====================================================================================================== */
 .galerie-contenant-de-photos {
   display: -ms-grid;
   display: grid;
@@ -999,9 +1005,9 @@ li {
   }
 }
 
-/* ================================================================== */
-/*-- PRESTATION ==================================================== */
-/* ================================================================== */
+/* ====================================================================================================== */
+/*-- PRESTATION ========================================================================================== */
+/* ====================================================================================================== */
 .prestations-grid1 {
   display: -ms-grid;
   display: grid;
@@ -1037,24 +1043,24 @@ li {
   .prestations-grid1 {
     -ms-grid-columns: minmax(200px, 1fr);
         grid-template-columns: minmax(200px, 1fr);
-    -ms-grid-rows: auto (18rem)[2];
-        grid-template-rows: auto repeat(2, 18rem);
+    -ms-grid-rows: (18rem)[2] auto;
+        grid-template-rows: repeat(2, 18rem) auto;
     margin: 15vw 10vw 15vw 10vw;
     /* auto will let row adapt depending of the content size: here the text */
-        grid-template-areas: "studioarticle" "studiofig1" "studiofig2";
+        grid-template-areas: "studiofig1" "studiofig2" "studioarticle";
   }
   .prestations-studio-article {
-    -ms-grid-row: 1;
+    -ms-grid-row: 3;
     -ms-grid-column: 1;
     grid-area: studioarticle;
   }
   .prestations-studio-figure1 {
-    -ms-grid-row: 2;
+    -ms-grid-row: 1;
     -ms-grid-column: 1;
     grid-area: studiofig1;
   }
   .prestations-studio-figure2 {
-    -ms-grid-row: 3;
+    -ms-grid-row: 2;
     -ms-grid-column: 1;
     grid-area: studiofig2;
   }
@@ -1096,24 +1102,24 @@ li {
   .prestations-grid2 {
     -ms-grid-columns: minmax(230px, 1fr);
         grid-template-columns: minmax(230px, 1fr);
-    -ms-grid-rows: auto (18rem)[2];
-        grid-template-rows: auto repeat(2, 18rem);
+    -ms-grid-rows: (18rem)[2] auto;
+        grid-template-rows: repeat(2, 18rem) auto;
     margin: 15vw 10vw 15vw 10vw;
     /* auto will let row adapt depending of the content size: here the text */
-        grid-template-areas: "domicilearticle" "domicilefig1" "domicilefig2";
+        grid-template-areas: "domicilefig1" "domicilefig2" "domicilearticle";
   }
   .prestations-domicile-article {
-    -ms-grid-row: 1;
+    -ms-grid-row: 3;
     -ms-grid-column: 1;
     grid-area: domicilearticle;
   }
   .prestations-domicile-figure1 {
-    -ms-grid-row: 2;
+    -ms-grid-row: 1;
     -ms-grid-column: 1;
     grid-area: domicilefig1;
   }
   .prestations-domicile-figure2 {
-    -ms-grid-row: 3;
+    -ms-grid-row: 2;
     -ms-grid-column: 1;
     grid-area: domicilefig2;
   }
@@ -1155,32 +1161,32 @@ li {
   .prestations-grid3 {
     -ms-grid-columns: minmax(200px, 1fr);
         grid-template-columns: minmax(200px, 1fr);
-    -ms-grid-rows: auto (18rem)[2];
-        grid-template-rows: auto repeat(2, 18rem);
+    -ms-grid-rows: (18rem)[2] auto;
+        grid-template-rows: repeat(2, 18rem) auto;
     /* auto will let row adapt depending of the content size: here the text */
     margin: 15vw 10vw 15vw 10vw;
-        grid-template-areas: "extarticle" "extfig1" "extfig2";
+        grid-template-areas: "extfig1" "extfig2" "extarticle";
   }
   .prestations-exterieur-article {
-    -ms-grid-row: 1;
+    -ms-grid-row: 3;
     -ms-grid-column: 1;
     grid-area: extarticle;
   }
   .prestations-exterieur-figure1 {
-    -ms-grid-row: 2;
+    -ms-grid-row: 1;
     -ms-grid-column: 1;
     grid-area: extfig1;
   }
   .prestations-exterieur-figure2 {
-    -ms-grid-row: 3;
+    -ms-grid-row: 2;
     -ms-grid-column: 1;
     grid-area: extfig2;
   }
 }
 
-/* ================================================================== */
-/*-- BLOG ==================================================== */
-/* ================================================================== */
+/* ====================================================================================================== */
+/*-- BLOG ========================================================================================== */
+/* ====================================================================================================== */
 .blog-grid {
   display: -ms-grid;
   display: grid;
@@ -1242,6 +1248,12 @@ li {
     margin: 2.5rem auto 6vw auto;
         grid-template-areas: "art1fig" "article1" "art2fig" "article2" "art3fig" "article3";
   }
+  .blog-article-common-style h3 {
+    margin-top: 1.5rem;
+  }
+  .blog-article-common-style p {
+    margin-bottom: 1.5rem;
+  }
   .blog-figure-article2,
   .blog-figure-article3 {
     margin-top: 2rem;
@@ -1280,9 +1292,9 @@ li {
   }
 }
 
-/* ================================================================== */
-/*-- ABOUTME ==================================================== */
-/* ================================================================== */
+/* ====================================================================================================== */
+/*-- ABOUTME ========================================================================================== */
+/* ====================================================================================================== */
 .aboutme-grid-container {
   display: -ms-grid;
   display: grid;
@@ -1363,6 +1375,25 @@ footer {
   margin-right: 1em;
   width: 3rem;
   height: auto;
+}
+
+@media screen and (max-width: 850px) {
+  footer {
+    -webkit-box-orient: vertical;
+    -webkit-box-direction: normal;
+        -ms-flex-direction: column;
+            flex-direction: column;
+  }
+  .footercopytxt {
+    margin: 0 auto;
+  }
+  .footerfigure {
+    margin: 1.3rem auto;
+  }
+  .socialmedia {
+    width: 3rem;
+    height: auto;
+  }
 }
 
 /*-- INDEX MAIN ==================================================== */
@@ -1482,6 +1513,33 @@ footer {
      object-position: 20% 75%;
 }
 
+.img-prestation-mediaQ1 img:hover .container:hover .image {
+  opacity: 0.3;
+}
+
+.img-prestation-mediaQ1 .info-on-hover:hover {
+  opacity: 1;
+}
+
+.info-on-hover {
+  -webkit-transition: .5s ease;
+  transition: .5s ease;
+  opacity: 0;
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  -webkit-transform: translate(-50%, -50%);
+          transform: translate(-50%, -50%);
+  text-align: center;
+}
+
+.info-on-hover .testtext .text {
+  background-color: #04AA6D;
+  color: white;
+  font-size: 16px;
+  padding: 16px 32px;
+}
+
 .galerie-container {
   display: -webkit-box;
   display: -ms-flexbox;
@@ -1533,6 +1591,7 @@ footer {
 
 .prestation-article-common-style p {
   width: 80%;
+  margin-bottom: 3vw;
 }
 
 .blog-article-common-style {
@@ -1629,4 +1688,78 @@ footer {
 }
 
 /*  c'est le container/ celui qui est placé sur la grid qui est centré */
+*, *before, *after {
+  -webkit-box-sizing: border-box;
+          box-sizing: border-box;
+}
+
+/* the width and height contain now the padding of the element */
+.form-container {
+  background-color: #f8f7f6;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  margin: 0 20vw;
+}
+
+label {
+  font-family: "Playfair Display", serif;
+  font-size: 1.6em;
+  font-weight: bold;
+  display: block;
+  padding: 1rem;
+  margin: 0.4rem 0 0 0;
+}
+
+input[type=text], [type=email], textarea, select {
+  font-family: "Poppins", sans-serif;
+  font-size: 1.3em;
+  width: 30vw;
+  display: block;
+  border: 1px solid black;
+  border-radius: 0.3rem;
+  padding: 0.5rem;
+  margin: 0 0 1rem 0;
+}
+
+input[type=submit] {
+  font-family: "Cinzel", serif;
+  font-size: 1.6em;
+  font-weight: bold;
+  color: #f8f7f6;
+  background-color: #836186;
+  padding: 1rem 2rem;
+  border-radius: 20px;
+  width: 20%;
+  -webkit-box-shadow: 10px 10px 10px rgba(128, 128, 128, 0.185);
+          box-shadow: 10px 10px 10px rgba(128, 128, 128, 0.185);
+  margin: 0 0 2rem 0;
+  cursor: pointer;
+}
+
+input[type=submit]:hover {
+  background-color: #c2a0c5;
+}
+
+@media screen and (max-width: 850px) {
+  .form-container {
+    margin: 0 5vw;
+  }
+  input[type=submit] {
+    width: 60%;
+  }
+  input[type=text], [type=email], textarea, select {
+    width: 80%;
+  }
+}
 /*# sourceMappingURL=main.css.map */
