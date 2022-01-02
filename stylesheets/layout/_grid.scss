@@ -4,65 +4,101 @@
     grid-template-areas:
       "index-presta1 index-presta1 index-presta1"
       "index-presta2 index-presta3 index-presta4";
-    margin: 0 $grid-margin-index-presta;
+    margin: 0 $grid-margin-general;
     /* 0 parce que des top /down, et gauche et droite */
     /* margin: 10px 90px 10px 50px; : haut droite bas gauche */
     padding: 0.5rem 0rem 4rem 0rem;
-    }
   }
-  .index-prestation-gen > figure {
-    height: 25vw;
-  }
-  .img-prestation-mediaQ3 {
-    object-position: 50% 5%;
-  }
-
-
+}
+.index-prestation-gen > figure {
+  height: 25vw;
+}
+.img-prestation-mediaQ3 {
+  object-position: 50% 5%;
+}
 
 @media (max-width: 850px) {
   .index-prestations-container {
     @include grid-basic(1fr, 0.1fr 0.1fr, 1rem 0) {
       grid-template-areas:
         "index-presta1"
-        "index-presta2" 
-        "index-presta3" 
+        "index-presta2"
+        "index-presta3"
         "index-presta4";
-      margin: 0 15vw;
+      margin: 0 12vw;
       padding: 0.5rem 0rem 2rem 0rem;
     }
     @for $i from 1 through 4 {
       .index-prestation-#{$i} {
-          grid-area: index-presta#{$i};
+        grid-area: index-presta#{$i};
       }
+    }
   }
+  .index-prestation-gen > figure {
+    height: 55vw;
   }
-.index-prestation-gen > figure {
-  height: 55vw;
-}
-.img-prestation-mediaQ3 {
-  object-position: 50% 5%;
-}
-
-
+  .img-prestation-mediaQ3 {
+    object-position: 50% 5%;
+  }
 }
 
 /*-- INDEX ACTUALITE INSTA ==================================================== */
+
+// .index-actu-insta-container {
+//   @include grid-basic(repeat(4, 1fr), 0.2fr repeat(2, 40vh), 1rem) {
+//     grid-template-areas:
+//       "actuh3 actuh3 actuh3 actuh3"
+//       "actufig1 actufig2 actufig3 actufig4"
+//       "actufig5 actufig6 actufig7 actufig8";
+//       /* check functions to get all actufig... wrote via function */
+//     margin: 0rem $grid-margin-general;
+//     padding: 3rem 0 5rem 0;
+//   }
+// }
+// .index-actu-insta-container > h3 {
+//   grid-area: actuh3;
+// }
+
 .index-actu-insta-container {
-  @include grid-basic(repeat(4, 1fr), 0.2fr repeat(2, 40vh), 1rem) {
-    grid-template-areas:
-      "actuh3 actuh3 actuh3 actuh3"
-      "actufig1 actufig2 actufig3 actufig4"
-      "actufig5 actufig6 actufig7 actufig8";
-    margin: 0rem $grid-margin-index;
-    padding: 3rem 0 5rem 0;
+  display: grid;
+  grid-template-columns: repeat(4, minmax(250px, 1fr));
+  gap: 1rem;
+  margin: 0rem $grid-margin-general;
+  padding: 3rem 0 5rem 0;
+}
+.index-actu-insta-container > h3 {
+  grid-column: 1 / span 4;
+  align-self: center;
+  padding: 1rem;
+}
+.index-actu-insta-figure {
+  max-height: 20vw;
+}
+
+
+@media screen and (max-width: 1200px) {
+  .index-actu-insta-container {
+    grid-template-columns: repeat(2, minmax(250px, 1fr));
+  }
+  .index-actu-insta-container > h3 {
+    grid-column: 1 / span 2;
+  }
+  .index-actu-insta-figure {
+    max-height: 25vw;
   }
 }
 
-.index-actu-insta-container > h3 {
-  grid-area: actuh3;
+@media screen and (max-width: 850px) {
+  .index-actu-insta-container {
+    grid-template-columns: minmax(250px, 1fr);
+  }
+  .index-actu-insta-container > h3 {
+    grid-column: 1 / 1;
+  }
+  .index-actu-insta-figure {
+    min-height: 45vw;
+  }
 }
-
-/* check functions to get all actufig... wrote via function */
 
 /* ================================================================== */
 /*-- STUDIO ==================================================== */
@@ -89,7 +125,7 @@
 
 @media screen and (min-width: 850px) {
   .studio-article-container {
-    margin: $grid-margin-top-down $grid-margin-index 0 $grid-margin-index;
+    margin: $grid-margin-top-down $grid-margin-general 0 $grid-margin-general;
   }
   h3 {
     grid-column: 1 / span 2;
@@ -119,12 +155,11 @@
         "fig2 fig3";
       margin: 0 $grid-margin-studio $grid-margin-top-down $grid-margin-studio;
     }
-@for $i from 1 through 3 {
-    .studio-figure#{$i} {
+    @for $i from 1 through 3 {
+      .studio-figure#{$i} {
         grid-area: fig#{$i};
+      }
     }
-}
-    
   }
 }
 
